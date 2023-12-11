@@ -1,0 +1,25 @@
+
+/** Category **/
+
+.tc-categories {
+  /* background-image: url(/assets/img/category.png); */
+  background-size: cover;
+  position: relative;
+}
+.tc-categories::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+}
+.tc-categories .navbar-container {
+  background: transparent;
+}
+.tc-categories .navbar-container .top-navbar.style-1 {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3333333333);
+}
