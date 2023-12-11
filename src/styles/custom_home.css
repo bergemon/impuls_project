@@ -1,0 +1,41 @@
+
+/** Content **/
+
+.tc-header-style10 .tc-breaking-style10 {
+  background-color: #ffffff;
+}
+
+.tc-categories-style10 .category {
+  font-size: 42px;
+}
+
+.item-750 {
+  max-width: 750px;
+}
+.item-550 {
+  max-width: 550px;
+}
+.item-350 {
+  max-width: 350px;
+}
+
+.market-nav-style1 {
+  background-color: #242424;
+}
+
+.tc-widget-top-games-style3 .widget-content .number-cards .number-card:hover .number, .tc-widget-top-games-style3 .widget-content .number-cards .number-card:hover .info .title {
+  color: var(--color-main);
+}
+
+.tc-widget-top-games-style3 .widget-content .number-cards .number-card .number {
+  font-family: "Neco-Variable";
+}
+
+@media (max-width: 787px) {
+  .item-550 {
+    max-width: 100%;
+  }
+  .item-750 {
+    max-width: 100%;
+  }
+}

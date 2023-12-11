@@ -1,0 +1,105 @@
+{
+    "footer": {
+        "about": "About",
+        "contact": "Contact",
+        "policy": "Policy",
+        "copyright": "© 2023 Copyrights by",
+        "rights": "All Rights Reserved"
+    },
+    "header": {
+        "headerDropDown": "All Categories",
+        "inicio": "Inicio"
+    },
+    "sidebar": {
+        "about": "About us",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem optio tempora quia iure quae. Soluta corporis quidem aperiam amet nihil.",
+        "contactNfollow": "Contact & follow",
+        "address": "streat name 12, hollywood City, USA",
+        "mail": "Newzin@gmail.com"
+    },
+    "navbar": {
+        "title": "You can search by category or news title",
+        "enter": "Enter keyword",
+        "btn": "Search"
+    },
+    "home": {
+        "gastroBlock": {
+            "title": "Gastronomy",
+            "viewAll": "View All Posts"
+        },
+        "favRandPosts": "Favorite random posts",
+        "whatIsNewBlock": {
+            "tourismBlock": {
+                "title": "Tourism",
+                "viewAll": "All Tourism News"
+            },
+            "educationBlock": {
+                "title": "Education",
+                "viewAll": "All Education News"
+            },
+            "topPosts": "Top posts",
+            "form": {
+                "title": "Newsletter",
+                "desciption": "Subscribe our newsletter to get the latest updates about news & promotions",
+                "nameIn": "You Full Name",
+                "mailIn": "Enter you email",
+                "policy": "By signing up, you agree to the our terms and our",
+                "policyLink": "Privacy Policy",
+                "button": "Subscribe"
+            }
+        },
+        "gastroSlider": {
+            "title": "Gastronomy",
+            "viewAll": "View All Posts"
+        },
+        "fashionBlock": {
+            "title": "Trend & Fashion",
+            "viewAll": "All Trend & Fashion News"
+        },
+        "HealthBlock": {
+            "title": "Health",
+            "viewAll": "All Health News"
+        },
+        "financeBlock": {
+            "title": "Finance & Law",
+            "viewAll": "All Finance & Law News"
+        },
+        "investBlock": {
+            "title": "Investments",
+            "viewAll": "All Investments News"
+        },
+        "networkBlock": {
+            "title": "Networking",
+            "viewAll": "All Networking News"
+        },
+        "sportBlock": {
+            "title": "Sport",
+            "viewAll": "All Sport News"
+        },
+        "featAuthors": "Featured authors",
+        "instaBlock": "Instagram",
+        "stayConnected": {
+            "title": "Stay Conntected",
+            "facebook": "Facebook",
+            "instagram": "Instagram",
+            "youtube": "Youtube"
+        }
+    },
+    "cat_sPage": {
+        "trendingPosts": "Trending posts",
+        "hatText": "We believe better things are created by great designers",
+        "pagination": {
+            "next": "next",
+            "prev": "prev"
+        }
+    },
+    "postPage": {
+        "share": "Share",
+        "editorsChoice": "Editor's Choice",
+        "conditionText": "Please type text on your language, when searching the posts",
+        "directions": {
+            "next": "next",
+            "prev": "previous"
+        }
+    }
+}
