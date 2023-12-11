@@ -14,7 +14,7 @@ const PagBtn: React.FC<{
     return (
         <Link
             className={`${Number(count) == Number(currentPage) ? "active" : ""}`}
-            href={`/${lang}/category/${categoryUrl}?page=${count}&id=${categoryId}`}
+            href={`/${lang}/category/${categoryUrl}?page=${Number(count)}&id=${Number(categoryId)}`}
         >
             <span>{count}</span>
         </Link>
@@ -50,7 +50,7 @@ const CatPagination: React.FC<{
             {
                 currentPage > 1
                 ? <Link
-                    href={`/${lang}/category/${categoryUrl}?page=${currentPage - 1}&id=${categoryId}`}
+                    href={`/${lang}/category/${categoryUrl}?page=${Number(currentPage) - 1}&id=${categoryId}`}
                 >
                     <span className="text text-uppercase"><i className={`${styles.arrowPrev} la la-angle-right`}/> {t('cat_sPage.pagination.prev')} </span>
                 </Link> : null
@@ -87,7 +87,7 @@ const CatPagination: React.FC<{
             {
                 currentPage < pages - 1
                 ? <Link
-                    href={`/${lang}/category/${categoryUrl}?page=${currentPage + 1}&id=${categoryId}`}
+                    href={`/${lang}/category/${categoryUrl}?page=${Number(currentPage) + 1}&id=${Number(categoryId)}`}
                 >
                     <span className="text text-uppercase">{t('cat_sPage.pagination.next')} <i className="la la-angle-right"></i> </span>
                 </Link> : null
