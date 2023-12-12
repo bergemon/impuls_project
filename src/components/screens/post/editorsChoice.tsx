@@ -17,7 +17,7 @@ const EditorsChoice = (props: editorsChoiceType) => {
         <section className="tc-editors-choice-style3 mb-40">
             <div className="container">
                 <div className="section-title-style2 mb-30">
-                    <h3 className="color-000">{t('postPage.editorsChoice')}</h3>
+                    <h3 className="color-000">{t('postPage.editorsChoice.title')}</h3>
                 </div>
                 <div className={"tc-post-grid-style1 tc-editors-choice-slider3 tc-slider-style1 slider-color-orange1"}>
                 <Swiper

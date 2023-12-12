@@ -76,7 +76,15 @@
             "title": "Sport",
             "viewAll": "All Sport News"
         },
-        "featAuthors": "Featured authors",
+        "featAuthors": {
+            "title": "Featured authors",
+            "firstAuthor": "David K.",
+            "firstAuthorDesc": "Magazine boss",
+            "secondAuthor": "Antonio M.",
+            "secondAuthorDesc": "Gastronomy critic",
+            "thirdAuthor": "Elena S.",
+            "thirdAuthorDesc": "Author, translator"
+        },   
         "instaBlock": "Instagram",
         "stayConnected": {
             "title": "Stay Conntected",
@@ -95,8 +103,12 @@
     },
     "postPage": {
         "share": "Share",
-        "editorsChoice": "Editor's Choice",
+        "editorsChoice": {
+            "title": "Editor's Choice",
+            "sliderBarVideo": "videos"
+        },
         "conditionText": "Please type text on your language, when searching the posts",
+        "views": "Views",
         "directions": {
             "next": "next",
             "prev": "previous"

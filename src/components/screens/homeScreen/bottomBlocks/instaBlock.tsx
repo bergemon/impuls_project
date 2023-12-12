@@ -10,7 +10,7 @@ const InstaBlockImage: React.FC<{
         ? <div className="col-4">
             {
             image?.media_url
-                ? <Link href={image?.media_url} className="img">
+                ? <Link target={"blank"} href={image?.media_url} className="img">
                     <Image width={200} height={200} src={image.media_url} alt="" />
                 </Link> : null
             }

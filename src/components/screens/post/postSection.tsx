@@ -13,8 +13,8 @@ type postSection = {
 
 const PostSection = (props: postSection) => {
     const { t, i18n } = useTranslation('locale')
+
     return (
-        
         <>
         {
             props.post.videoUrl
@@ -64,7 +64,7 @@ const PostSection = (props: postSection) => {
                                             }
                                             {
                                                 props.post?.viewCounter
-                                                ? <span className=""> <i className="la la-eye me-1"></i> {props.post.viewCounter}</span>
+                                                ? <span className=""> <i className="la la-eye me-1"></i> {props.post.viewCounter} {t('postPage.views')}</span>
                                                 : null
                                             }
                                         </div>

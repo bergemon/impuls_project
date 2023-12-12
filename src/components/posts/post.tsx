@@ -63,7 +63,7 @@ export const Post = (props: Type) => {
             return (
                 // Post with image on right side
                 <div className={props.first ? "item pb-4" : "item py-4"}>
-                    <div className="row gx-3 align-items-center">
+                    <div className="row gx-3">
                         <div className="col-8">
                         <div style={{overflowWrap: "anywhere"}} className="content">
                             <h2 className="title mb-10">

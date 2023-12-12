@@ -38,8 +38,6 @@ export default function PageLayout(props: LayoutProps) {
     let isDark
     theme === 'dark' ? isDark = true : isDark = false
 
-    console.log(isNavBarOpen)
-
     return (
         <div
             className={`${isDark ? "dark-theme" : ""} ${font.className}`}
