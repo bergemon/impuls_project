@@ -17,7 +17,7 @@ export const VideoCard = (props: videoCardType) => {
     return (
         <div className="video-card">
             <div className="img img-cover">
-                <Image width={2000} height={2000} src={props.post?.image ? props.post.image : "/"} alt="" />
+                <Image width={500} height={500} src={props.post?.image ? props.post.image : "/"} alt="" />
                 <div className="info">
                     <div className="row justify-content-center">
                         <div className="col-lg-7">

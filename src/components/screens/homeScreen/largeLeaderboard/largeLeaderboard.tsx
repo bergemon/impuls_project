@@ -24,7 +24,7 @@ const LargeLeaderBoard = (props: leaderBoard) => {
             <div className="row justify-content-center">
                 <div className="col-10">
                     <Link href={props?.url} className="img img-cover overflow-hidden radius-6">
-                        <Image width={2000} height={2000} src={props?.img ? props?.img : '/'} alt="" />
+                        <Image width={500} height={500} src={props?.img ? props?.img : '/'} alt="" />
                     </Link>
                 </div>
             </div>

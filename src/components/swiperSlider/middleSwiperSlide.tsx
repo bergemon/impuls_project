@@ -6,7 +6,7 @@ export const MiddleSwiperSlideContent = (props: favPostType) => {
     return (
         <div className="story-card">
             <div className="img img-cover">
-                <Image width={2000} height={2000} src={props?.image ? props?.image : '/'} alt="" className="main-img" />
+                <Image width={500} height={500} src={props?.image ? props?.image : '/'} alt="" className="main-img" />
             </div>
             <div className="info">
                 <h2 className="fsz-28px mb-20"> <Link href={`post/${props?.url ? props.url : ""}?id=${props?.id}`} className="hover-main">

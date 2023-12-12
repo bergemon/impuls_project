@@ -25,7 +25,7 @@ const PostSection = (props: postSection) => {
                 {
                     !props.post.videoUrl
                     ? <div className="tc-main-post-img img-cover pt-40 mb-50">
-                        <Image width={2000} height={2000} src={props.post?.mainImageLink} alt=""/>
+                        <Image width={500} height={500} src={props.post?.mainImageLink} alt=""/>
                     </div> : null
                 }
                 <div className="tc-main-post-content color-000">

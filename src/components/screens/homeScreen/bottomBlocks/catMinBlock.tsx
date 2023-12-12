@@ -35,7 +35,7 @@ const CatMinBlock = (props: catLargeBlockType) => {
                 {
                     !props.withoutImage && props.posts[0] ?
                     <div className="img img-cover th-250 radius-7 overflow-hidden">
-                        <Image width={2000} height={2000} src={props.posts[0]?.imageSmall ? props.posts[0].imageSmall : '/'} alt="" />
+                        <Image width={500} height={500} src={props.posts[0]?.imageSmall ? props.posts[0].imageSmall : '/'} alt="" />
                     </div> : null
                 }
             <div className="content pt-30">

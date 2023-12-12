@@ -11,7 +11,7 @@ export const EditorsChoiceSlide: React.FC<{
         <div className="swiper-slide">
             <div className="item">
                 <div className="img img-cover">
-                    <Image width={2000} height={2000} src={props.post?.imageSmall} alt="" className="main-img" />
+                    <Image width={500} height={500} src={props.post?.imageSmall} alt="" className="main-img" />
                     {
                         props.post?.videoUrl
                         ? <a href={props.post.videoUrl} data-lity="" className="video_icon icon-60">

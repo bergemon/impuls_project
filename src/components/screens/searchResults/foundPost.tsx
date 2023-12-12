@@ -9,7 +9,7 @@ const FoundPost: React.FC<{
             <div className="row">
                 <div className="col-lg-5 pb-80">
                     <div className="img img-cover th-250 radius-5 overflow-hidden">
-                        <Image width={2000} height={2000}
+                        <Image width={500} height={500} 
                             src={props.foundPost?.imageSmall}
                             alt=""
                         />

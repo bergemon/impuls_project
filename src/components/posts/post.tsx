@@ -28,7 +28,7 @@ export const Post = (props: Type) => {
                 <div className={`${props.extra ? "py-4" : ""} tc-post-grid-default mt-30 mt-lg-0`}>
                     <div className="item">
                         <div className="img img-cover th-200 radius-6 overflow-hidden">
-                            <Image width={2000} height={2000} src={props.post?.imageSmall ? props.post.imageSmall : '/'} alt=""/>
+                            <Image width={500} height={500} src={props.post?.imageSmall ? props.post.imageSmall : '/'} alt=""/>
                         </div>
                         <div style={{overflowWrap: "anywhere"}} className="content pt-20">
                             <h2 className="title mb-10">
@@ -90,7 +90,7 @@ export const Post = (props: Type) => {
                         </div>
                         <div className="col-4">
                             <div className="img th-120 img-cover radius-4 overflow-hidden">
-                                <Image width={2000} height={2000} src={props.post?.imageSmall ? props.post.imageSmall : '/'} alt="" />
+                                <Image width={500} height={500} src={props.post?.imageSmall ? props.post.imageSmall : '/'} alt="" />
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ export const Post = (props: Type) => {
             <div className="row gx-3">
                 <div className="col-4">
                     <div className="img th-140 img-cover radius-4 overflow-hidden">
-                        <Image width={2000} height={2000} src={props.post?.imageSmall ? props.post.imageSmall : '/'} alt="" />
+                        <Image width={500} height={500} src={props.post?.imageSmall ? props.post.imageSmall : '/'} alt="" />
                         {
                             props.post?.videoUrl
                             ? <a href={props.post.videoUrl} data-lity="" className="video_icon icon-60">

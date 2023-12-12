@@ -13,7 +13,7 @@ export const CategoryPost = (props: catPostType) => {
             <div className="row">
                 <div className="col-lg-5">
                     <div className="img img-cover th-250 radius-5 overflow-hidden">
-                        <Image width={2000} height={2000} src={props.post?.imageSmall ? props.post.imageSmall : '/'} alt="" />
+                        <Image width={500} height={500} src={props.post?.imageSmall ? props.post.imageSmall : '/'} alt="" />
                     </div>
                 </div>
                 <div className="col-lg-7">

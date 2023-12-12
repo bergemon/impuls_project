@@ -11,7 +11,7 @@ const FeaturedAuthors = () => {
 
             <Link href="/" className="columnist-card d-flex align-items-center pb-20 border-bottom border-1 brd-gray">
                 <div className="img img-cover icon-70 rounded-circle overflow-hidden flex-lg-shrink-0 me-4">
-                    <Image width={2000} height={2000} src="/assets/img/author.png" alt="" />
+                    <Image width={500} height={500} src="/assets/img/author.png" alt="" />
                 </div>
                 <div className="info">
                     <h4 className="name fsz-14px mb-10 fw-bold hover-main">
@@ -24,7 +24,7 @@ const FeaturedAuthors = () => {
             </Link>
             <Link href="/" className="columnist-card d-flex align-items-center pb-20 pt-20 border-bottom border-1 brd-gray">
                 <div className="img img-cover icon-70 rounded-circle overflow-hidden flex-lg-shrink-0 me-4">
-                    <Image width={2000} height={2000} src="/assets/img/author.png" alt="" />
+                    <Image width={500} height={500} src="/assets/img/author.png" alt="" />
                 </div>
                 <div className="info">
                     <h4 className="name fsz-14px mb-10 fw-bold hover-main">
@@ -37,7 +37,7 @@ const FeaturedAuthors = () => {
             </Link>
             <Link href="/" className="columnist-card d-flex align-items-center pb-20 pt-20 border-bottom border-1 brd-gray">
                 <div className="img img-cover icon-70 rounded-circle overflow-hidden flex-lg-shrink-0 me-4">
-                    <Image width={2000} height={2000} src="/assets/img/author.png" alt="" />
+                    <Image width={500} height={500} src="/assets/img/author.png" alt="" />
                 </div>
                 <div className="info">
                     <h4 className="name fsz-14px mb-10 fw-bold hover-main">

@@ -8,7 +8,7 @@ const CatBanner = () => {
                 <div className="row justify-content-center">
                     <div className="col-lg-12">
                         <Link href="/" className="d-block img-cover">
-                            <Image width={2000} height={2000} src="/assets/img/banner2.png" alt=""/>
+                            <Image width={500} height={500} src="/assets/img/banner2.png" alt=""/>
                         </Link>
                     </div>
                 </div>

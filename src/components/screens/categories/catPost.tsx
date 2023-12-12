@@ -15,7 +15,7 @@ const CatPost: React.FC<{
                     <div className="img th-230 img-cover overflow-hidden radius-6">
                         {
                             props.lazy
-                            ? <Image width={2000} height={2000} src={props.post?.imageSmall ? props.post.imageSmall : '/'} alt=""/>
+                            ? <Image width={500} height={500} src={props.post?.imageSmall ? props.post.imageSmall : '/'} alt=""/>
                             : <img src={props.post?.imageSmall ? props.post.imageSmall : '/'} alt=""/>
                         }
                     </div>

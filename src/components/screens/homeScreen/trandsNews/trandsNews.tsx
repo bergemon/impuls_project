@@ -1,10 +1,12 @@
 import { categoryType } from "@/types/categoriesType"
 import { postType } from "@/types/postsType"
-import { Swiper, SwiperSlide } from "swiper/react"
 import { BottomSwiperSlideContent } from "../../../swiperSlider/bottomSwiperSlide"
 import Link from "next/link"
-import { Navigation, Pagination } from "swiper/modules"
 import { useTranslation } from "next-i18next"
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
+import styles from './gastroSlider.module.css'
+import { ButtonGroup, CustomDot } from "@/components/swiperSlider/buttonGroup"
 
 type GastronomySliderType = {
     category: categoryType
@@ -13,6 +15,26 @@ type GastronomySliderType = {
 
 const GastronomySlider = (props: GastronomySliderType) => {
     const { t, i18n } = useTranslation('locale')
+
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 3000, min: 2000 },
+          items: 3.1
+        },
+        desktop: {
+          breakpoint: { max: 2000, min: 1024 },
+          items: 2.1
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
+        }
+    }
     
     return (
         <section className="tc-trends-news-style10 px-lg-5 overflow-hidden">
@@ -27,53 +49,32 @@ const GastronomySlider = (props: GastronomySliderType) => {
             </div>
             {/* Bottom carousel gastronomy cat */}
             <div className={"tc-trends-news-slider10"}>
-                <Swiper
-                    className={"swiper-container"}
-                    centeredSlides={true}
-                    slidesPerView={3}
-                    spaceBetween={20}
-                    breakpoints={{
-                        0: { slidesPerView: 1 },
-                        480: { slidesPerView: 1 },
-                        787: { slidesPerView: 1 },
-                        991: { slidesPerView: 2 },
-                        1200: { slidesPerView: 2 },
-                        1400: {  slidesPerView: 3 },
-                        2000: {  slidesPerView: 6 },
-                    }}
-                    navigation={{
-                        nextEl: ".arrows .swiper-button-next",
-                        prevEl: ".arrows .swiper-button-prev",
-                    }}
-                    pagination={{
-                        clickable: true,
-                        el: ".arrows .swiper-pagination"
-                    }}
-                    keyboard={false}
-                    speed={1000}
-                    modules={[Pagination, Navigation]}
-                    loop={true}
-                >
-                    {
-                        props.posts ?
-                        <div className="swiper-wrapper custom-swiper-wrapper">
-                            {props.posts?.map((post, id) => {
-                                return id < 6 ?
-                                <SwiperSlide key={id} className={"swiper-wrapper custom-swiper-wrapper"}>
-                                    <BottomSwiperSlideContent post={post} slideId={id} />
-                                </SwiperSlide> : null
-                            })}
-                        </div> : null
-                    }
-                    <div className="arrows">
-                        <div className="swiper-button-prev" />
-                        <div
-                            style={{marginTop: "14%"}}
-                            className="swiper-pagination"
-                        />
-                        <div className="swiper-button-next" />
-                    </div>
-                </Swiper>
+                <div className="swiper-container" style={{overflow: 'visible'}}>
+                    <Carousel
+                        className={"swiper-wrapper custom-swiper-wrapper"}
+                        responsive={responsive}
+                        ssr={true}
+                        slidesToSlide={1}
+                        arrows={false}
+                        infinite={true}
+                        itemClass={`swiper-slide ${styles.gastroSlide}`}
+                        containerClass={styles.reactMultiCarouselList}
+                        showDots={true}
+                        customDot={<CustomDot onMove={undefined} index={undefined} onClick={undefined} active={undefined} />}
+                        customButtonGroup={<ButtonGroup next={undefined} previous={undefined} goToSlide={undefined} />}
+                        renderButtonGroupOutside={true}
+                        renderDotsOutside={true}
+                    >
+                        {
+                            props.posts
+                            ? props.posts?.map((post, id) => {
+                                return id < 6
+                                ? <BottomSwiperSlideContent key={id} post={post} slideId={id} />
+                                : null
+                            }) : null
+                        }
+                    </Carousel>
+                </div>
             </div>
         </section>
     )

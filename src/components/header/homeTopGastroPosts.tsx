@@ -21,7 +21,7 @@ export const TopHomePostsBlock: React.FC<{
             <div className="tc-breaking-style10 px-lg-5">
                 <p className="text-uppercase fsz-14px mb-40">{ t('home.gastroBlock.title') }</p>
                 <div className="img img-cover">
-                    <Image width={2000} height={2000} src={props.posts[0]?.imageSmall ? props.posts[0]?.imageSmall : '/'} alt="" />
+                    <Image width={500} height={500} src={props.posts[0]?.imageSmall ? props.posts[0]?.imageSmall : '/'} alt="" />
                 </div>
                 {
                     props.posts

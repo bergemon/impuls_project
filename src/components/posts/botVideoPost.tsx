@@ -34,7 +34,7 @@ export const BotVideoPost = (props: videoPostType) => {
                                     </div>
                                     <div className="col-4 custom__sub-video--width">
                                         <div className="img th-200 img-cover radius-4 overflow-hidden">
-                                            <Image width={2000} height={2000} src={props.post?.imageSmall ? props.post?.imageSmall : '/'} alt="" />
+                                            <Image width={500} height={500} src={props.post?.imageSmall ? props.post?.imageSmall : '/'} alt="" />
                                             {
                                                 props.post?.videoUrl
                                                 ? <a href={`https://youtu.be/${props.post.videoUrl}`} data-fancybox="" className="video_icon icon-60">
