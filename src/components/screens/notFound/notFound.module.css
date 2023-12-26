@@ -1,0 +1,18 @@
+.SearchBtn404 {
+    display: none;
+}
+.Page {
+    min-height: 49.3vh;
+    display: flex;
+    flex-direction: column;
+}
+.Content {
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+@media (min-width: 600px) {
+    .SearchBtn404 {
+        display: inline;
+    }
+}

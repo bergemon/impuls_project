@@ -1,0 +1,280 @@
+{
+    "head": {
+        "home": {
+            "title": "Impuls PLUS, international luxury magazine in Spain",
+            "description": "Magazine and guide to gastronomy and luxury services in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+        },
+        "searchedPosts": {
+            "title": "Search results",
+            "description": "Here are the results for your query."
+        },
+        "notFound_404": {
+            "title": "Oops! Page not found.",
+            "description": "The destination is uncertain, but you can return to the home page or explore other sections to continue your journey."
+        },
+        "about": {
+            "title": "About us",
+            "description": "Trilingual project in Spanish, English and Russian which perfectly fits in the current multicultural space. It clearly commits to quality both in the content and the form."
+        },
+        "contact": {
+            "title": "Contact us",
+            "description": "If you have any question, we will be happy to assist you, as well as to listen to your suggestion about the collaboration."
+        },
+        "policy": {
+            "title": "Privacy Policy",
+            "description": "Explore our Privacy Policy to understand how we collect, use, and protect your personal information. We're committed to your privacy and transparency."
+        },
+        "categoryMeta": {
+            "author": "Impuls PLUS",
+            "gastronomy": {
+                "title": "Gastronomy",
+                "subtitle": "Impuls PLUS, Spain's top gastronomy magazine",
+                "description": "Guide to quality gastronomy in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "tourism": {
+                "title": "Tourism",
+                "subtitle": "Impuls PLUS, Spain's top tourist guide and magazine",
+                "description": "Guide to tourist destinations and cultural attractions in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "trend": {
+                "title": "Trend & Fashion",
+                "subtitle": "Impuls PLUS, Spain's top guide to services and shopping",
+                "description": "Guide to trend, design and luxury leisure in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "health": {
+                "title": "Health",
+                "subtitle": "Impuls PLUS, Spain's top guide to clinics and hospitals",
+                "description": "Guide to the best private clinics, spas and wellness centres in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "finance": {
+                "title": "Finance & Law",
+                "subtitle": "Impuls PLUS, Spain's top guide to domestic and international financial news",
+                "description": "Guide to domestic and international financial news in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "education": {
+                "title": "Education",
+                "subtitle": "Impuls PLUS, Spain's top guide to prestigious private education",
+                "description": "Guide to highly prestigious educational centers in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "sport": {
+                "title": "Sport",
+                "subtitle": "Impuls PLUS, Spain's top guide to sports news",
+                "description": "Guide to sports establishments and trends in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "investments": {
+                "title": "Investments",
+                "subtitle": "Impuls PLUS, Spain's top guide to the best investment opportunities",
+                "description": "Guide to investment opportunities in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "culture": {
+                "title": "Culture",
+                "subtitle": "Impuls PLUS, Spain's top guide to cultural trends",
+                "description": "Guide to cultural trends, reviews and events in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "businessCulture": {
+                "title": "Business Culture",
+                "subtitle": "Impuls PLUS, Spain's top guide to business culture and strategy",
+                "description": "Magazine about business trends, strategies and ethics in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "networking": {
+                "title": "Networking",
+                "subtitle": "Impuls PLUS, luxury events and Networking in Spain",
+                "description": "Networking events to generate business opportunities in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "impulsTV": {
+                "title": "Impuls TV",
+                "subtitle": "Impuls TV, a lifestyle, gastronomic and tourist channel",
+                "description": "Exclusive video reports on tourist destinations, premium gastronomy in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            }
+        }
+    },
+    "footer": {
+        "about": "About us",
+        "contact": "Contact",
+        "policy": "Privacy Policy",
+        "copyright": "© 2024 Impuls PLUS Magazine",
+        "rights": "All Rights Reserved"
+    },
+    "header": {
+        "headerDropDown": "Categories",
+        "home": "Home"
+    },
+    "sidebar": {
+        "about": "About us",
+        "description": "If you have any question or question, we will be happy to assist you, as well as to listen to your suggestion about the collaboration.",
+        "categories": "Categories",
+        "contactNfollow": "In contact with us",
+        "contact": {
+            "phone": "+34 966 889 867",
+            "email": "info@grupoimpuls.es",
+            "web": "www.grupoimpuls.es",
+            "address1": "Avda. Federico García Lorca, 6 Office 11",
+            "address2": "03509 Finestrat, Alicante"
+        }
+    },
+    "navbar": {
+        "title": "With IMPULS magazine you will find from the latest trends in haute cuisine to the best travel destinations and the most exclusive services.",
+        "enter": "Enter what you are looking for",
+        "btn": "Search"
+    },
+    "searchedPosts": {
+        "title": "Search Results",
+        "conditionText": "Please type text on your language, when searching the posts"
+    },
+    "home": {
+        "gastroBlock": {
+            "title": "Gastronomy",
+            "viewAll": "View All Posts"
+        },
+        "favRandPosts": "Featured",
+        "whatIsNewBlock": {
+            "tourismBlock": {
+                "title": "Tourism",
+                "viewAll": "View All Posts"
+            },
+            "educationBlock": {
+                "title": "Education",
+                "viewAll": "View All Posts"
+            },
+            "topPosts": "Top posts",
+            "form": {
+                "title": "Newsletter",
+                "description": "Subscribe to our Newsletter! You will receive the latest articles and news.",
+                "nameIn": "Your Name",
+                "mailIn": "Your E-mail",
+                "policy": "By signing up, you agree to the our terms and our",
+                "policyLink": "privacy policy",
+                "button": "Subscribe",
+                "errorHandler": {
+                    "nameErr": "Written name is too short",
+                    "defErr": "Wrong e-mail address",
+                    "dotErr": "Dot must be placed after «@» symbol",
+                    "mailErr": "Too short e-mail name",
+                    "hostErr": "E-mail host name must have 3 or more characters",
+                    "domainErr": "E-mail domain name must have 2 or more characters"
+                }
+            },
+            "stayConnected": "Stay connected"
+        },
+        "gastroSlider": {
+            "title": "Gastronomy",
+            "viewAll": "View All Posts"
+        },
+        "fashionBlock": {
+            "title": "Trend & Fashion",
+            "viewAll": "View All Posts"
+        },
+        "HealthBlock": {
+            "title": "Health",
+            "viewAll": "View All Posts"
+        },
+        "financeBlock": {
+            "title": "Finance & Law",
+            "viewAll": "View All Posts"
+        },
+        "investBlock": {
+            "title": "Investments",
+            "viewAll": "View All Posts"
+        },
+        "networkBlock": {
+            "title": "Networking",
+            "viewAll": "View All Posts"
+        },
+        "sportBlock": {
+            "title": "Sport",
+            "viewAll": "View All Posts"
+        },
+        "featAuthors": {
+            "title": "Featured authors",
+            "firstAuthor": "David K.",
+            "firstAuthorDesc": "Chief Editor",
+            "secondAuthor": "Antonio M.",
+            "secondAuthorDesc": "Gastronomy critic",
+            "thirdAuthor": "Elena S.",
+            "thirdAuthorDesc": "Author, translator"
+        },   
+        "instaBlock": "Instagram",
+        "stayConnected": {
+            "title": "Follow us",
+            "facebook": "Facebook",
+            "instagram": "Instagram",
+            "twitter": "Twitter"
+        }
+    },
+    "cat_sPage": {
+        "trendingPosts": "Top Posts",
+        "pagination": {
+            "next": "Next",
+            "prev": "Previous"
+        },
+        "categories": [
+            {
+                "title": "Gastronomy",
+                "description": "Section designed for people who often ask themselves: What good restaurants are in this area? Where can I go to have lunch or dinner?"
+            },
+            {
+                "title": "Tourism",
+                "description": "Do you love traveling? Visiting exhibitions? Or maybe, finding out the touristic industry innovations? Click here and let yourself go!"
+            },
+            {
+                "title": "Culture",
+                "description": "Immerse yourself in the world of art, literature, music and more! Discover trends, reviews and events that enrich the spirit!"
+            },
+            {
+                "title": "Trend & Fashion",
+                "description": "Find out the latest trends, technologies, lifestyle, feminism, fashion, designers, collections, clothing, accessories, etc.!"
+            },
+            {
+                "title": "Education",
+                "description": "Selected information about highly prestigious educational centers, both domestic and international"
+            },
+            {
+                "title": "Health",
+                "description": "The latest information about highly recommended hospitals, medical advances, the latest discoveries and disease prevention"
+            },
+            {
+                "title": "Business Culture",
+                "description": "Trends, strategies and ethics in business. Cultivate an innovative and sustainable business culture for success!"
+            },
+            {
+                "title": "Finance & Law",
+                "description": "Domestic and international financial news, breaking news about labor, civil, corporate, banking, fiscal, international law, etc."
+            },
+            {
+                "title": "Investments",
+                "description": "Explore safe and profitable investment opportunities! Diversify your portfolio with expert advice and reach your financial goals!"
+            },
+            {
+                "title": "Sport",
+                "description": "Here we inform you about sportspersons, establishments and trends reflecting the spirit of physical culture, sports and competition"
+            },
+            {
+                "title": "Impuls TV",
+                "description": "A lifestyle channel in SPAN, ENG and RUS, for a select public, with the aim of fostering social and business relationships"
+            },
+            {
+                "title": "Networking",
+                "description": "Connect, collaborate and grow! Join our network of professionals to expand opportunities, share ideas and strengthen your career!"
+            }
+        ]
+    },
+    "postPage": {
+        "share": "Share",
+        "editorsChoice": {
+            "title": "Editor's Choice",
+            "sliderBarVideo": "Videos"
+        },
+        "views": "Views",
+        "directions": {
+            "next": "Next",
+            "prev": "Previous"
+        }
+    },
+    "notFound_404": {
+        "title": "404",
+        "description": "Oops! Page Not Found.",
+        "sorry": "Sorry, the requested page could not be found.",
+        "searchBtn": "Try searching?",
+        "goBack": "back to home"
+    }
+}

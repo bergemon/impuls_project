@@ -1,0 +1,282 @@
+{
+    "head": {
+        "home": {
+            "title": "Impuls PLUS, revista internacional de lujo en España",
+            "description": "Revista y guía de gastronomía y servicios de lujo en Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+        },
+        "searchedPosts": {
+            "title": "Resultados de la búsqueda",
+            "description": "Aquí están los resultados de tu consulta."
+        },
+        "notFound_404": {
+            "title": "¡Vaya! Página no encontrada.",
+            "description": "El destino es incierto, pero puedes volver al inicio o explorar otras secciones para continuar tu viaje."
+        },
+        "about": {
+            "title": "Acerca de nosotros",
+            "description": "Proyecto trilíngüe, en español, inglés y ruso, que se inscribe perfectamente en el espacio multicultural actual. Con una clara apuesta por la calidad tanto del contenido como de la forma."
+        },
+        "contact": {
+            "title": "Contacta con nosotros",
+            "description": "Ante cualquier duda o pregunta estaremos encantados de atenderte, así como de escuchar tu sugerencia sobre la colaboración."
+        },
+        "policy": {
+            "title": "Política de privacidad",
+            "description": "Explora nuestra Política de Privacidad para entender cómo recopilamos, utilizamos y protegemos tu información personal. Estamos comprometidos con tu privacidad y transparencia."
+        },
+        "categoryMeta": {
+            "author": "Impuls PLUS",
+            "gastronomy": {
+                "title": "Gastronomía",
+                "subtitle": "Impuls PLUS, revista de alta gastronomía en España",
+                "description": "Guía de gastronomía de calidad en Alicante & Costa Blanca, Región de Murcia, Valencia y Madrid"
+            },
+            "tourism": {
+                "title": "Turismo",
+                "subtitle": "Impuls PLUS, revista y guía de turismo en España",
+                "description": "Guía de destinos turísticos y atractivos culturales. Museos y eventos de Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+            },
+            "trend": {
+                "title": "Tendencias & Moda",
+                "subtitle": "Impuls PLUS, guía de servicios y shopping en España",
+                "description": "Guía de tendencias, diseño, ocio de lujo de Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+            },
+            "health": {
+                "title": "Salud",
+                "subtitle": "Impuls PLUS, guía de las mejores clínicas privadas, balnearios, centros de wellness en España",
+                "description": "Guía de las mejores clínicas privadas, balnearios, centros de wellness de Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+            },
+            "finance": {
+                "title": "Finanzas & Leyes",
+                "subtitle": "Impuls PLUS, guía de noticias financieras nacionales e internacionales en España",
+                "description": "Guía de noticias financieras nacionales e internacionales de Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+            },
+            "education": {
+                "title": "Educación",
+                "subtitle": "Impuls PLUS, guía de educación privada de alto prestigio en España",
+                "description": "Guía de colegios e universidades privadas en España: Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+            },
+            "sport": {
+                "title": "Deporte",
+                "subtitle": "Impuls PLUS, guía de noticias sobre el deporte en España",
+                "description": "Guía de establecimientos y tendencias del deporte de Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+            },
+            "investments": {
+                "title": "Inversiones",
+                "subtitle": "Impuls PLUS, guía de las mejores oportunidades de inversión en España",
+                "description": "Guía de oportunidades de inversión seguras y rentables en Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+            },
+            "culture": {
+                "title": "Cultura",
+                "subtitle": "Impuls PLUS, guía de tendencias culturales en España",
+                "description": "Guía cultural de tendencias, reseñas y eventos en España: Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+            },
+            "businessCulture": {
+                "title": "Cultura de Negocios",
+                "subtitle": "Impuls PLUS, estrategia y cultura empresarial en España",
+                "description": "Revista sobre estrategias y ética en el mundo empresarial de Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+            },
+            "networking": {
+                "title": "Networking",
+                "subtitle": "Impuls PLUS, eventos de lujo para empresarios en España",
+                "description": "Eventos de networking para generar oportunidades de negocios en Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+            },
+            "impulsTV": {
+                "title": "Impuls TV",
+                "subtitle": "Impuls TV, canal de lifestyle sobre gastronomía y turismo",
+                "description": "Vídeo reportajes exclusivos sobre los mejores destinos turísticos, gastronomía premium y mucho más en España"
+            }
+        }
+    },
+    "footer": {
+        "about": "Sobre nosotros",
+        "contact": "Contacto",
+        "policy": "Política de privacidad",
+        "copyright": "© 2024 Revista Impuls PLUS",
+        "rights": "Todos los derechos reservados"
+    },
+    "header": {
+        "headerDropDown": "Categorías",
+        "home": "Inicio"
+    },
+    "sidebar": {
+        "about": "Acerca de nosotros",
+        "description": "Ante cualquier duda o pregunta estaremos encantados de atenderte, así como de escuchar tu sugerencia sobre la colaboración.",
+        "categories": "Categorías",
+        "contactNfollow": "En contacto con nosotros",
+        "contact": {
+            "phone": "+34 966 889 867",
+            "email": "info@grupoimpuls.es",
+            "web": "www.grupoimpuls.es",
+            "address1": "Avda. Federico García Lorca, 6 Despacho 11",
+            "address2": "03509 Finestrat, Alicante"
+        }
+    },
+    "navbar": {
+        "title": "Con la revista IMPULS encontrarás desde las últimas tendencias en alta cocina hasta los mejores destinos de viaje y los servicios más exclusivos.",
+        "enter": "Escribe lo que buscas",
+        "btn": "Buscar"
+    },
+    "searchedPosts": {
+        "title": "Resultados de la búsqueda",
+        "conditionText": "Por favor escriba el texto en su idioma cuando busque las publicaciones"
+    },
+    "home": {
+        "gastroBlock": {
+            "title": "Gastronomía",
+            "viewAll": "Ver todos los posts"
+        },
+        "favRandPosts": "Destacados",
+        "whatIsNewBlock": {
+            "tourismBlock": {
+                "title": "Turismo",
+                "viewAll": "Ver todos los posts"
+            },
+            "educationBlock": {
+                "title": "Educación",
+                "viewAll": "Ver todos los posts"
+            },
+            "topPosts": "Top Posts",
+            "form": {
+                "title": "Newsletter",
+                "description": "¡Suscríbete a nuestra Newsletter! Recibirás los últimos reportajes y noticias de interés",
+                "nameIn": "Tu nombre",
+                "mailIn": "Tu E-mail",
+                "policy": "RESPONSABLE DEL TRATAMIENTO: DESARROLLO WEB EFICAZ S.L.U. FINALIDAD: Envío de nuestra newsletter DERECHOS: Tiene derecho al acceso, rectificación, supresión, oposición, limitación y portabilidad de sus datos personales. También puede retirar el consentimiento prestado para este tratamiento en cualquier momento. Puede acudir igualmente a la Autoridad de Control (AEPD) para reclamar sus derechos en materia de protección de datos. Además, puede oponerse a la segmentación que haremos de los datos personales para poder enviarle promociones e información acorde a sus gustos y necesidades. Para más información acuda a nuestra política de privacidad",
+                "policyLink": "política de privacidad",
+                "button": "Suscríbete",
+                "errorHandler": {
+                    "nameErr": "El nombre escrito es demasiado corto",
+                    "defErr": "Dirección de correo errónea",
+                    "dotErr": "El punto debe colocarse después del símbolo «@»",
+                    "mailErr": "Nombre de correo electrónico demasiado corto",
+                    "hostErr": "El nombre del host de correo electrónico debe tener 3 o más caracteres",
+                    "domainErr": "El nombre de dominio del correo electrónico debe tener 2 o más caracteres"
+                }
+            },
+            "stayConnected": "Mantente conectada"
+        },
+        "gastroSlider": {
+            "title": "Gastronomía",
+            "viewAll": "Ver todos los posts"
+        },
+        "fashionBlock": {
+            "title": "Tendencias & Moda",
+            "viewAll": "Ver todos los posts"
+        },
+        "HealthBlock": {
+            "title": "Salud",
+            "viewAll": "Ver todos los posts"
+        },
+        "financeBlock": {
+            "title": "Finanzas & Leyes",
+            "viewAll": "Ver todos los posts"
+        },
+        "investBlock": {
+            "title": "Inversiones",
+            "viewAll": "Ver todos los posts"
+        },
+        "networkBlock": {
+            "title": "Networking",
+            "viewAll": "Ver todos los posts"
+        },
+        "sportBlock": {
+            "title": "Deporte",
+            "viewAll": "Ver todos los posts"
+        },
+        "featAuthors": {
+            "title": "Autores destacados",
+            "firstAuthor": "David K.",
+            "firstAuthorDesc": "Jefe de redacción",
+            "secondAuthor": "Antonio M.",
+            "secondAuthorDesc": "Crítico gastronómico",
+            "thirdAuthor": "Elena S.",
+            "thirdAuthorDesc": "Autora, traductora"
+        },   
+        "instaBlock": "Instagram",
+        "stayConnected": {
+            "title": "Síguenos",
+            "facebook": "Facebook",
+            "instagram": "Instagram",
+            "twitter": "Twitter"
+        }
+    },
+    "cat_sPage": {
+        "trendingPosts": "Top Posts",
+        "pagination": {
+            "next": "Siguiente",
+            "prev": "Anterior"
+        },
+        "categories": [
+            {
+                "title": "Gastronomía",
+                "description": "Sección pensada para todos aquellos que a menudo se preguntan: ¿Qué buenos restaurantes hay en esta zona? ¿Adónde ir a comer o a cenar?"
+            },
+            {
+                "title": "Turismo",
+                "description": "¿Te encanta viajar? ¿Visitar exposiciones? O ¿conocer las innovaciones en el sector del turismo? ¡Entra aquí y déjate llevar!"
+            },
+            {
+                "title": "Cultura",
+                "description": "¡Sumérgete en el mundo de arte, literatura, música y más! ¡Descubre tendencias, reseñas y eventos que enriquecen el espíritu!"
+            },
+            {
+                "title": "Tendencias & Moda",
+                "description": "¡Descubre lo último en tecnologías, estilo de vida, feminismo, pasarelas, diseñadores, colecciones, prendas de vestir, accesorios etc.!"
+            },
+            {
+                "title": "Educación",
+                "description": "Información selecta sobre centros educativos de alto prestigio a nivel nacional e internacional"
+            },
+            {
+                "title": "Salud",
+                "description": "Últimas noticias sobre hospitales altamente recomendados, avances médicos, últimos descubrimientos y prevención de enfermedades"
+            },
+            {
+                "title": "Cultura de Negocios",
+                "description": "Tendencias, estrategias y ética en el mundo empresarial. ¡Cultiva una cultura de negocios innovadora y sostenible para el éxito!"
+            },
+            {
+                "title": "Finanzas & Leyes",
+                "description": "Noticias financieras nacionales e internacionales, última hora del derecho laboral, civil, bancario, tributario, internacional, etc."
+            },
+            {
+                "title": "Inversiones",
+                "description": "¡Explora oportunidades de inversión seguras y rentables! ¡Diversifica tu cartera con asesoría experta y alcanza tus metas financieras!"
+            },
+            {
+                "title": "Deporte",
+                "description": "Aquí te informamos de deportistas, establecimientos y tendencias que representan el espíritu de cultura física, deporte y competición"
+            },
+            {
+                "title": "Impuls TV",
+                "description": "Canal de lifestyle en ESP, ENG y RUS, para un público selecto, con el objetivo de fomentar las relaciones culturales y empresariales"
+            },
+            {
+                "title": "Networking",
+                "description": "¡Conecta, colabora y crece! ¡Únete a nuestra red de profesionales para expandir oportunidades, compartir ideas y fortalecer tu carrera!"
+            }
+
+        ]
+    },
+    "postPage": {
+        "share": "Compartir",
+        "editorsChoice": {
+            "title": "Selección del editor",
+            "sliderBarVideo": "Videos"
+        },
+        "conditionText": "Por favor escribe el texto en tu idioma cuando busques las publicaciones",
+        "views": "Vistas",
+        "directions": {
+            "next": "Siguiente",
+            "prev": "Anterior"
+        }
+    },
+    "notFound_404": {
+        "title": "404",
+        "description": "¡Ups! Página no encontrada.",
+        "sorry": "Lo sentimos, no se pudo encontrar la página solicitada.",
+        "searchBtn": "¿Intenta buscar?",
+        "goBack": "de vuelta a casa"
+    }
+}

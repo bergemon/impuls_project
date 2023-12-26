@@ -1,0 +1,26 @@
+/* Screen body - main tag */
+.Main {
+    min-height: 49.3vh;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 50px;
+}
+
+/* Translated text */
+.Heading {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Lorem ipsum... */
+.Paragraph {
+    font-style: italic;
+    font-size: 20px;
+}
+
+/* Second translation example */
+.SecondExample {
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    font-style: italic;
+}

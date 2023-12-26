@@ -1,0 +1,11 @@
+.backDrop {
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    transition: opacity .15s linear;
+    z-index: 99;
+}
