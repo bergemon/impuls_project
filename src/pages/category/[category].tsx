@@ -175,7 +175,3 @@ export const getServerSideProps = async ({req, res, locale, query}: NextPageCont
         }
     }
 }
-
-function getCatMeta(catPosts: postsByCategory) {
-    throw new Error("Function not implemented.")
-}
