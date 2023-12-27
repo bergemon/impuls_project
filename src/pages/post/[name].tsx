@@ -10,6 +10,7 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useState } from "react"
 import { getCookie, setCookie } from 'cookies-next'
+import { localEnvData } from "@/types/layout"
 
 type postLayout = {
     categories: categoryType[]
@@ -23,6 +24,7 @@ type postLayout = {
     postName: string
     postId: number
     translations: boolean[]
+    localEnvData: localEnvData
 }
 
 export default function Post(props: postLayout) {
@@ -36,6 +38,7 @@ export default function Post(props: postLayout) {
             author={props.post.author || ""}
             post={props.post}
             lang={props.lang}
+            localEnvData={props.localEnvData}
         >
             <PageLayout
                 categories={props.categories}
@@ -63,6 +66,10 @@ export default function Post(props: postLayout) {
 export const getServerSideProps = async ({req, res, locale, query}: NextPageContext) => {
     // Определяем локализацию
     const lang = locale
+
+    // Пробрасываем клиенту данные переменных локальной среды
+    const localEnvData = { website: process.env.WEBSITE }
+
     // Id of the targeted post
     const postName: any = query["name"]
 
@@ -188,7 +195,7 @@ export const getServerSideProps = async ({req, res, locale, query}: NextPageCont
                 'locale'
             ])),
             categories, lang, rPosts, prevPosts, nextPosts,
-            postName, postId, post, translations
+            postName, postId, post, translations, localEnvData
         }
     }
 }

@@ -3,6 +3,7 @@ import { SearchResultsScreen } from "@/components/screens/searchResults"
 import { HeadLayout } from "@/layout/headLayout"
 import PageLayout from "@/layout/pageLayout"
 import { categoryType } from "@/types/categoriesType"
+import { localEnvData } from "@/types/layout"
 import { foundPostType, postsType } from "@/types/postsType"
 import { socialsType } from "@/types/socials"
 import { NextPageContext } from "next"
@@ -16,6 +17,7 @@ type searchLayout = {
     socials: socialsType
     foundPosts: foundPostType[]
     lang: string
+    localEnvData: localEnvData
 }
 
 export default function SearchResults(props: searchLayout) {
@@ -28,6 +30,7 @@ export default function SearchResults(props: searchLayout) {
             description={t('head.searchedPosts.description')}
             author={t('head.searchedPosts.author')}
             lang={props.lang}
+            localEnvData={props.localEnvData}
         >
             <PageLayout
                 categories={props.categories}
@@ -46,11 +49,13 @@ export default function SearchResults(props: searchLayout) {
 }
 
 export const getServerSideProps = async (ctx: NextPageContext) => {
+    // Определяем локализацию
+    const lang = ctx.locale
+
+    // Пробрасываем клиенту данные переменных локальной среды
+    const localEnvData = { website: process.env.WEBSITE }
 
     try {
-        // Определяем локализацию
-        const lang = ctx.locale
-
         // Вытягиваем категории
         const categories_ = await fetch(`${process.env.API}/categories/${lang}`)
         // Ищем посты
@@ -66,19 +71,27 @@ export const getServerSideProps = async (ctx: NextPageContext) => {
                     'common',
                     'locale'
                 ])),
-                categories, foundPosts, lang
+                categories, foundPosts, lang, localEnvData
             }
         }
     } 
     catch(e) {
-        // Определяем локализацию
-        const lang = ctx.locale
-
-        // Вытягиваем категории
-        const categories_ = await fetch(`${process.env.API}/categories/${lang}`)
-
-        // Сериализуем в джейсона
-        const categories = await categories_.json()
+        let categories_, categories
+        try {
+            // Вытягиваем категории
+            categories_ = await fetch(`${process.env.API}/categories/${lang}`)
+    
+            // Сериализуем в джейсона
+            categories = await categories_.json()
+        }
+        catch {
+            return {
+                redirect: {
+                    permanent: false,
+                    destination: `${lang === 'es' ? "" : "/" + lang}/404`
+                }
+            }
+        }
 
         return {
             props: {
@@ -86,7 +99,7 @@ export const getServerSideProps = async (ctx: NextPageContext) => {
                     'common',
                     'locale'
                 ])),
-                lang, categories
+                lang, categories, localEnvData
             }
         }
     }

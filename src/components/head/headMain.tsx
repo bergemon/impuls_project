@@ -1,24 +1,21 @@
 import { singlePost } from "@/types/postsType"
 import Head from "next/head"
 import { useRouter } from "next/router"
-import { categoriesStatic } from '@/utils/categories'
+import { categoryLangUrl } from "@/types/categoriesType"
+import { localEnvData } from "@/types/layout"
 
 type headMainProps = {
     title: string
     description: string
     author: string
     lang: string
+    localEnvData: localEnvData
     post?: singlePost
-    categoryId?: number
+    catUrl?: categoryLangUrl[]
 }
 
 export const HeadMain = (props: headMainProps) => {
     const router = useRouter()
-
-    let catId
-    if (props.categoryId) {
-        catId = props.categoryId - 1
-    }
 
     return (
         <Head>
@@ -61,59 +58,71 @@ export const HeadMain = (props: headMainProps) => {
             }
             {
                 !props.post &&
-                !props.categoryId &&
+                !props.catUrl &&
                 <>
-                    <link rel="alternate" hrefLang="es" href={`${process.env.WEBSITE}${router.asPath}`} />
-                    <link rel="alternate" hrefLang="en" href={`${process.env.WEBSITE}/en${router.asPath.length > 1 ? router.asPath : ''}`} />
-                    <link rel="alternate" hrefLang="ru" href={`${process.env.WEBSITE}/ru${router.asPath.length > 1 ? router.asPath : ''}`} />
-                    <link rel="alternate" hrefLang="x-default" href={`${process.env.WEBSITE}${router.asPath}`} />
-                    <link rel="canonical" href={`${process.env.WEBSITE}${router.asPath}`} key="canonical" />
+                    <link rel="alternate" hrefLang="es" href={`${props.localEnvData.website}${router.asPath}`} />
+                    <link rel="alternate" hrefLang="en" href={`${props.localEnvData.website}/en${router.asPath.length > 1 ? router.asPath : ''}`} />
+                    <link rel="alternate" hrefLang="ru" href={`${props.localEnvData.website}/ru${router.asPath.length > 1 ? router.asPath : ''}`} />
+                    <link rel="alternate" hrefLang="x-default" href={`${props.localEnvData.website}${router.asPath}`} />
+                    <link rel="canonical" href={`${props.localEnvData.website}${router.asPath}`} key="canonical" />
                 </>
             }
             {
                 props.post && props.post.availableTranslations["ES"] !== undefined
-                ? <link rel="canonical" href={`${process.env.WEBSITE}/post/${props.post.availableTranslations["ES"]}`} key="canonical" />
+                ? <link rel="canonical" href={`${props.localEnvData.website}/post/${props.post.availableTranslations["ES"]}`} key="canonical" />
                 : props.post && props.post.availableTranslations["EN"] !== undefined
-                ? <link rel="canonical" href={`${process.env.WEBSITE}/en/post/${props.post.availableTranslations["EN"]}`} key="canonical" />
+                ? <link rel="canonical" href={`${props.localEnvData.website}/en/post/${props.post.availableTranslations["EN"]}`} key="canonical" />
                 : props.post && props.post.availableTranslations["RU"] !== undefined
-                ? <link rel="canonical" href={`${process.env.WEBSITE}/ru/post/${props.post.availableTranslations["RU"]}`} key="canonical" />
+                ? <link rel="canonical" href={`${props.localEnvData.website}/ru/post/${props.post.availableTranslations["RU"]}`} key="canonical" />
                 : null
             }
             {
-                props.categoryId &&
-                <link rel="canonical" href={`${process.env.WEBSITE}/category/${categoriesStatic["es"][catId].url}`} key="canonical" />
+                props.catUrl &&
+                <link rel="canonical" href={`${props.localEnvData.website}/category/${props.catUrl[0].url}`} key="canonical" />
             }
             {
                 props.post &&
                 <>
                     {
                         props.post.availableTranslations["ES"] !== undefined
-                        ? <link rel="alternate" hrefLang="es" href={`${process.env.WEBSITE}/post/${props.post.availableTranslations["ES"]}`} />
+                        ? <link rel="alternate" hrefLang="es" href={`${props.localEnvData.website}/post/${props.post.availableTranslations["ES"]}`} />
                         : null
                     }
                     {
                         props.post.availableTranslations["EN"] !== undefined
-                        ? <link rel="alternate" hrefLang="en" href={`${process.env.WEBSITE}/en/post/${props.post.availableTranslations["EN"]}`} />
+                        ? <link rel="alternate" hrefLang="en" href={`${props.localEnvData.website}/en/post/${props.post.availableTranslations["EN"]}`} />
                         : null
                     }
                     {
                         props.post.availableTranslations["RU"] !== undefined
-                        ? <link rel="alternate" hrefLang="ru" href={`${process.env.WEBSITE}/ru/post/${props.post.availableTranslations["RU"]}`} />
+                        ? <link rel="alternate" hrefLang="ru" href={`${props.localEnvData.website}/ru/post/${props.post.availableTranslations["RU"]}`} />
+                        : null
+                    }
+                    {
+                        props.post.availableTranslations["ES"] !== undefined
+                        ? <link rel="alternate" hrefLang="x-default" href={`${props.localEnvData.website}/ru/post/${props.post.availableTranslations["ES"]}`} />
+                        : props.post.availableTranslations["EN"] !== undefined
+                        ? <link rel="alternate" hrefLang="x-default" href={`${props.localEnvData.website}/ru/post/${props.post.availableTranslations["EN"]}`} />
+                        : props.post.availableTranslations["RU"] !== undefined
+                        ? <link rel="alternate" hrefLang="x-default" href={`${props.localEnvData.website}/ru/post/${props.post.availableTranslations["RU"]}`} />
                         : null
                     }
                 </>
             }
             {
-                props.categoryId &&
+                props.catUrl &&
                 <>
                     {
-                        <link rel="alternate" hrefLang="es" href={`${process.env.WEBSITE}/category/${categoriesStatic["es"][catId].url}`} />
+                        <link rel="alternate" hrefLang="es" href={`${props.localEnvData.website}/category/${props.catUrl[0].url}`} />
                     }
                     {
-                        <link rel="alternate" hrefLang="en" href={`${process.env.WEBSITE}/en/category/${categoriesStatic["en"][catId].url}`} />
+                        <link rel="alternate" hrefLang="en" href={`${props.localEnvData.website}/en/category/${props.catUrl[1].url}`} />
                     }
                     {
-                        <link rel="alternate" hrefLang="ru" href={`${process.env.WEBSITE}/ru/category/${categoriesStatic["ru"][catId].url}`} />
+                        <link rel="alternate" hrefLang="ru" href={`${props.localEnvData.website}/ru/category/${props.catUrl[2].url}`} />
+                    }
+                    {
+                        <link rel="alternate" hrefLang="x-default" href={`${props.localEnvData.website}/category/${props.catUrl[0].url}`} />
                     }
                 </>
             }

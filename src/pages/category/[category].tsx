@@ -2,13 +2,14 @@ import { socialsData } from "@/components/data/socialsData"
 import { CategoryPage } from "@/components/screens/categories"
 import { HeadLayout } from "@/layout/headLayout"
 import PageLayout from "@/layout/pageLayout"
-import { categoryType } from "@/types/categoriesType"
+import { categoryLangUrl, categoryType } from "@/types/categoriesType"
 import { instaImg, postType, postsByCategory, topPostType } from "@/types/postsType"
 import { NextPageContext } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useState } from "react"
 import { getCookie, setCookie } from 'cookies-next'
+import { localEnvData } from "@/types/layout"
 
 type categoriesType = {
     catPosts: postsByCategory
@@ -20,6 +21,8 @@ type categoriesType = {
     categoryUrl: string
     currentPage: number
     topPosts: topPostType[]
+    localEnvData: localEnvData
+    catUrl?: categoryLangUrl[]
 }
 
 export default function Categories(props: categoriesType) {
@@ -77,7 +80,8 @@ export default function Categories(props: categoriesType) {
             description={description}
             author={t('head.categoryMeta.author')}
             lang={props.lang}
-            categoryId={props.categoryId}
+            catUrl={props.catUrl}
+            localEnvData={props.localEnvData}
         >
             <PageLayout
                 categories={props.categories}
@@ -113,6 +117,9 @@ export const getServerSideProps = async ({req, res, locale, query}: NextPageCont
     const categories_ = await fetch(`${process.env.API}/categories/${lang}`)
     const categories = await categories_.json()
 
+    // Пробрасываем клиенту данные переменных локальной среды
+    const localEnvData = { website: process.env.WEBSITE }
+
     // Вытягиваем избранные посты данной категории
     let topPosts_, topPosts
 
@@ -121,10 +128,25 @@ export const getServerSideProps = async ({req, res, locale, query}: NextPageCont
     catPosts_ = await fetch(`${process.env.API}/posts/${lang}/${categoryUrl}?page=${currentPage ? currentPage - 1 : "0"}&size=20`)
     currentPage -= 1
 
-    let catPosts, categoryId, lastLocale
+    let catPosts, categoryId, lastLocale, catUrl_, catUrl
     try {
         catPosts = await catPosts_.json()
         categoryId = catPosts.category.id
+
+        try {
+            // Вытягиваем ссылки на текующую категорию
+            catUrl_ = await fetch(`${process.env.API}/category/${categoryId}`)
+            catUrl = await catUrl_.json()
+        }
+        catch {
+            const err = {
+                id: categoryId,
+                name: "error",
+                url: "error",
+                count: 0
+            }
+            catUrl = [ err, err, err]
+        }
 
         topPosts_ = await fetch(`${process.env.API}/posts/top/${lang}?id=${categoryId}`)
         topPosts = await topPosts_.json()
@@ -165,7 +187,7 @@ export const getServerSideProps = async ({req, res, locale, query}: NextPageCont
             return {
                 redirect: {
                     permanent: false,
-                    destination: `/${locale}/category/${categories[categoryId - 1].url}${currentPage > 0 ? "?page=" : ""}${currentPage > 0 ? currentPage + 1 : ""}`
+                    destination: `${locale === 'es' ? '' : '/' + locale}/category/${categories[categoryId - 1].url}${currentPage > 0 ? "?page=" : ""}${currentPage > 0 ? currentPage + 1 : ""}`
                 }
             }
         }
@@ -186,7 +208,8 @@ export const getServerSideProps = async ({req, res, locale, query}: NextPageCont
                 'locale'
             ])),
             categories, categoryId, lang, catPosts,
-            categoryUrl, currentPage, topPosts
+            categoryUrl, currentPage, topPosts, catUrl,
+            localEnvData
         }
     }
 }

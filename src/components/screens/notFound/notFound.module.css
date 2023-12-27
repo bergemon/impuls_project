@@ -8,8 +8,8 @@
 }
 .Content {
     height: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 @media (min-width: 600px) {
     .SearchBtn404 {

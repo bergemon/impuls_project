@@ -12,3 +12,7 @@ export type Layout = {
     headAuthor: string
     headKeywords: string
 }
+
+export type localEnvData = {
+    website: string
+}

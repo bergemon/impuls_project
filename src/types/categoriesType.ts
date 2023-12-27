@@ -5,3 +5,10 @@ export type categoryType = {
     image: string
     count: number
 }
+
+export type categoryLangUrl = {
+    id: number
+    name: string
+    url: string
+    count: number
+}

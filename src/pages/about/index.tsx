@@ -3,6 +3,7 @@ import { AboutScreen } from "@/components/screens/staticPages/about"
 import { HeadLayout } from "@/layout/headLayout"
 import PageLayout from "@/layout/pageLayout"
 import { categoryType } from "@/types/categoriesType"
+import { localEnvData } from "@/types/layout"
 import { NextPageContext } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -11,6 +12,7 @@ import { useState } from "react"
 type aboutPage = {
     categories: categoryType[]
     lang: string
+    localEnvData: localEnvData
 }
 
 export default function About(props: aboutPage) {
@@ -24,6 +26,7 @@ export default function About(props: aboutPage) {
             description={t('head.about.description')}
             author={t('head.about.author')}
             lang={props.lang}
+            localEnvData={props.localEnvData}
         >
             <PageLayout
                 categories={props.categories}
@@ -42,6 +45,9 @@ export const getStaticProps = async (ctx: NextPageContext) => {
     // Определяем локализацию
     const lang = ctx.locale
 
+    // Пробрасываем клиенту данные переменных локальной среды
+    const localEnvData = { website: process.env.WEBSITE }
+
     // Вытягиваем категории
     const categories_ = await fetch(`${process.env.API}/categories/${lang}`)
 
@@ -55,7 +61,7 @@ export const getStaticProps = async (ctx: NextPageContext) => {
                 'locale',
                 'about'
             ])),
-            categories, lang
+            categories, lang, localEnvData
         },
         revalidate: 60
     }

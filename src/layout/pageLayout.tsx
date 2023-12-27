@@ -1,7 +1,7 @@
 import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import { Navbar } from '@/components/navbar'
-import { categoryType } from '@/types/categoriesType'
+import { categoryLangUrl, categoryType } from '@/types/categoriesType'
 import { SideBar } from '@/components/sideBar/sideBar'
 import { socialsType } from '@/types/socials'
 import React, { Dispatch, SetStateAction } from 'react'

@@ -3,6 +3,7 @@ import { HomeScreen } from '@/components/screens/homeScreen'
 import { HeadLayout } from '@/layout/headLayout'
 import PageLayout from '@/layout/pageLayout'
 import { categoryType } from '@/types/categoriesType'
+import { localEnvData } from '@/types/layout'
 import { favPostType, instaImg, postsType, topPostType } from '@/types/postsType'
 import { HomeParams } from '@/utils/headerParams'
 import { NextPageContext } from 'next'
@@ -17,6 +18,7 @@ type IPosts = {
     instaImgs: instaImg[]
     lang: string
     topPosts: topPostType[]
+    localEnvData: localEnvData
 }
 
 export default function Home(props: IPosts) {
@@ -29,6 +31,7 @@ export default function Home(props: IPosts) {
             description={t('head.home.description')}
             author={t('head.home.author')}
             lang={props.lang}
+            localEnvData={props.localEnvData}
         >
             <PageLayout
                 categories={props.categories}
@@ -56,6 +59,8 @@ export const getStaticProps = async (ctx: NextPageContext) => {
     // Определяем локализацию
     const lang = ctx.locale
 
+    // Пробрасываем клиенту данные переменных локальной среды
+    const localEnvData = { website: process.env.WEBSITE }
     // Вытягиваем посты
     const posts_ = await fetch(`${process.env.API}/posts/home/${lang}?categoryIds=${HomeParams.categoryId}&postsSize=${HomeParams.postsSize}&sliderSize=${HomeParams.sliderSize}&categoryPostsSizes=11:20`)
     // Вытягиваем избранные посты
@@ -80,7 +85,7 @@ export const getStaticProps = async (ctx: NextPageContext) => {
                 'common',
                 'locale'
             ])),
-            posts, favoritePosts, categories, instaImgs, lang, topPosts
+            posts, favoritePosts, categories, instaImgs, lang, topPosts, localEnvData
         },
         revalidate: 60
     }
