@@ -10,6 +10,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useState } from "react"
 import { getCookie, setCookie } from 'cookies-next'
 import { localEnvData } from "@/types/layout"
+import { getCatMetaData, translationObject } from "@/utils/getCatMeta"
 
 type categoriesType = {
     catPosts: postsByCategory
@@ -31,52 +32,13 @@ export default function Categories(props: categoriesType) {
     
     const isCategory = true
 
-    let description
-    switch(props.catPosts?.category?.name) {
-        case(t('head.categoryMeta.gastronomy.title')):
-            description = t('head.categoryMeta.gastronomy.description')
-            break;
-        case(t('head.categoryMeta.tourism.title')):
-            description = t('head.categoryMeta.tourism.description')
-            break;
-        case(t('head.categoryMeta.trend.title')):
-            description = t('head.categoryMeta.trend.description')
-            break;
-        case(t('head.categoryMeta.health.title')):
-            description = t('head.categoryMeta.health.description')
-            break;
-        case(t('head.categoryMeta.finance.title')):
-            description = t('head.categoryMeta.finance.description')
-            break;
-        case(t('head.categoryMeta.education.title')):
-            description = t('head.categoryMeta.education.description')
-            break;
-        case(t('head.categoryMeta.sport.title')):
-            description = t('head.categoryMeta.sport.description')
-            break;
-        case(t('head.categoryMeta.investments.title')):
-            description = t('head.categoryMeta.investments.description')
-            break;
-        case(t('head.categoryMeta.culture.title')):
-            description = t('head.categoryMeta.culture.description')
-            break;
-        case(t('head.categoryMeta.businessCulture.title')):
-            description = t('head.categoryMeta.businessCulture.description')
-            break;
-        case(t('head.categoryMeta.networking.title')):
-            description = t('head.categoryMeta.networking.description')
-            break;
-        case(t('head.categoryMeta.impulsTV.title')):
-            description = t('head.categoryMeta.impulsTV.description')
-            break;
-        default:
-            description = t('head.categoryMeta.gastronomy.description')
-            break;
-    }
+    const translation: translationObject[] = t('head.categoryMeta', { returnObjects: true })
+
+    const [title, description] = getCatMetaData({catPosts: props.catPosts, translation: translation})
 
     return (
         <HeadLayout
-            title={`${props.catPosts?.category?.name}`}
+            title={`${title}`}
             description={description}
             author={t('head.categoryMeta.author')}
             lang={props.lang}
@@ -212,4 +174,8 @@ export const getServerSideProps = async ({req, res, locale, query}: NextPageCont
             localEnvData
         }
     }
+}
+
+function getCatMeta(catPosts: postsByCategory) {
+    throw new Error("Function not implemented.")
 }

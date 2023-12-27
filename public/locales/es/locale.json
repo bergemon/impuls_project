@@ -76,15 +76,15 @@
                 "subtitle": "Impuls PLUS, estrategia y cultura empresarial en España",
                 "description": "Revista sobre estrategias y ética en el mundo empresarial de Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
             },
-            "networking": {
-                "title": "Networking",
-                "subtitle": "Impuls PLUS, eventos de lujo para empresarios en España",
-                "description": "Eventos de networking para generar oportunidades de negocios en Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
-            },
             "impulsTV": {
                 "title": "Impuls TV",
                 "subtitle": "Impuls TV, canal de lifestyle sobre gastronomía y turismo",
                 "description": "Vídeo reportajes exclusivos sobre los mejores destinos turísticos, gastronomía premium y mucho más en España"
+            },
+            "networking": {
+                "title": "Networking",
+                "subtitle": "Impuls PLUS, eventos de lujo para empresarios en España",
+                "description": "Eventos de networking para generar oportunidades de negocios en Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
             }
         }
     },

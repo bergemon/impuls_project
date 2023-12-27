@@ -76,15 +76,15 @@
                 "subtitle": "Impuls PLUS, Spain's top guide to business culture and strategy",
                 "description": "Magazine about business trends, strategies and ethics in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
             },
-            "networking": {
-                "title": "Networking",
-                "subtitle": "Impuls PLUS, luxury events and Networking in Spain",
-                "description": "Networking events to generate business opportunities in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
-            },
             "impulsTV": {
                 "title": "Impuls TV",
                 "subtitle": "Impuls TV, a lifestyle, gastronomic and tourist channel",
                 "description": "Exclusive video reports on tourist destinations, premium gastronomy in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
+            },
+            "networking": {
+                "title": "Networking",
+                "subtitle": "Impuls PLUS, luxury events and Networking in Spain",
+                "description": "Networking events to generate business opportunities in Spain: Alicante, Costa Blanca, Region of Murcia, Valencia, Madrid"
             }
         }
     },
