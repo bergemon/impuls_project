@@ -38,7 +38,7 @@ export const HeadMain = (props: headMainProps) => {
             }
             <meta property="og:title" content={`${props.title}`} />
             <meta property="og:description" content={`${props.description}`} />
-            <meta property="og:url" content={`/${props.lang}${router.asPath.length > 1 ? router.asPath : ''}`} />
+            <meta property="og:url" content={`${props.localEnvData.website}/${props.lang}${router.asPath.length > 1 ? router.asPath : ''}`} />
             {
                 props.post &&
                 <meta property="og:image" content={`${props.post.mainImageLink}`} />
@@ -68,17 +68,22 @@ export const HeadMain = (props: headMainProps) => {
                 </>
             }
             {
-                props.post && props.post.availableTranslations["ES"] !== undefined
+                props.post && props.post.availableTranslations["ES"] !== undefined && props.lang === 'es'
                 ? <link rel="canonical" href={`${props.localEnvData.website}/post/${props.post.availableTranslations["ES"]}`} key="canonical" />
-                : props.post && props.post.availableTranslations["EN"] !== undefined
+                : props.post && props.post.availableTranslations["EN"] !== undefined && props.lang === 'en'
                 ? <link rel="canonical" href={`${props.localEnvData.website}/en/post/${props.post.availableTranslations["EN"]}`} key="canonical" />
-                : props.post && props.post.availableTranslations["RU"] !== undefined
+                : props.post && props.post.availableTranslations["RU"] !== undefined && props.lang === 'ru'
                 ? <link rel="canonical" href={`${props.localEnvData.website}/ru/post/${props.post.availableTranslations["RU"]}`} key="canonical" />
                 : null
             }
             {
-                props.catUrl &&
-                <link rel="canonical" href={`${props.localEnvData.website}/category/${props.catUrl[0].url}`} key="canonical" />
+                props.catUrl && props.lang === 'es'
+                ? <link rel="canonical" href={`${props.localEnvData.website}/category/${props.catUrl[0].url}`} key="canonical" />
+                : props.catUrl && props.lang === 'en'
+                ? <link rel="canonical" href={`${props.localEnvData.website}/en/category/${props.catUrl[1].url}`} key="canonical" />
+                : props.catUrl && props.lang === 'ru'
+                ? <link rel="canonical" href={`${props.localEnvData.website}/en/category/${props.catUrl[2].url}`} key="canonical" />
+                : null
             }
             {
                 props.post &&
@@ -100,10 +105,10 @@ export const HeadMain = (props: headMainProps) => {
                     }
                     {
                         props.post.availableTranslations["ES"] !== undefined
-                        ? <link rel="alternate" hrefLang="x-default" href={`${props.localEnvData.website}/ru/post/${props.post.availableTranslations["ES"]}`} />
-                        : props.post.availableTranslations["EN"] !== undefined
-                        ? <link rel="alternate" hrefLang="x-default" href={`${props.localEnvData.website}/ru/post/${props.post.availableTranslations["EN"]}`} />
-                        : props.post.availableTranslations["RU"] !== undefined
+                        ? <link rel="alternate" hrefLang="x-default" href={`${props.localEnvData.website}/post/${props.post.availableTranslations["ES"]}`} />
+                        : props.post.availableTranslations["EN"] !== undefined && props.lang === 'en'
+                        ? <link rel="alternate" hrefLang="x-default" href={`${props.localEnvData.website}/en/post/${props.post.availableTranslations["EN"]}`} />
+                        : props.post.availableTranslations["RU"] !== undefined && props.lang === 'ru'
                         ? <link rel="alternate" hrefLang="x-default" href={`${props.localEnvData.website}/ru/post/${props.post.availableTranslations["RU"]}`} />
                         : null
                     }
