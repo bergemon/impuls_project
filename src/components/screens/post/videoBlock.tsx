@@ -28,9 +28,14 @@ export const PostVideoBlock: React.FC<{
                             </a>
                         </div>
                         <div className="info-content">
-                            <p className="sub-title">featured, video</p>
+                            <p className="sub-title">
+                                {
+                                    props.post?.categories?.map((item, id) => {
+                                        return id < 1 ? `${item.name}` : `, ${item.name}`
+                                    })
+                                }
+                            </p>
                             <h3 className="title"> {props.post?.title} </h3>
-                            <p className="mt-20">Stay focused and remember we design the best WordPress News</p>
                         </div>
                     </div>
                 </div>

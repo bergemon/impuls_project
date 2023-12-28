@@ -82,7 +82,7 @@ export const HeadMain = (props: headMainProps) => {
                 : props.catUrl && props.lang === 'en'
                 ? <link rel="canonical" href={`${props.localEnvData.website}/en/category/${props.catUrl[1].url}`} key="canonical" />
                 : props.catUrl && props.lang === 'ru'
-                ? <link rel="canonical" href={`${props.localEnvData.website}/en/category/${props.catUrl[2].url}`} key="canonical" />
+                ? <link rel="canonical" href={`${props.localEnvData.website}/ru/category/${props.catUrl[2].url}`} key="canonical" />
                 : null
             }
             {
