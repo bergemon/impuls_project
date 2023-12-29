@@ -156,6 +156,9 @@
             },
             "stayConnected": "Mantente conectada"
         },
+        "hotvideosBlock": {
+            "playVideo": "Reproduce el Video"
+        },
         "gastroSlider": {
             "title": "Gastronomía",
             "viewAll": "Ver todos los posts"
@@ -261,6 +264,10 @@
     },
     "postPage": {
         "share": "Compartir",
+        "playVideo": {
+            "firstColumn": "reproduce",
+            "secondColumn": "el video"
+        },
         "editorsChoice": {
             "title": "Selección del editor",
             "sliderBarVideo": "Videos"

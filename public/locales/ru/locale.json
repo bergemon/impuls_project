@@ -160,6 +160,9 @@
                 }
             }
         },
+        "hotvideosBlock": {
+            "playVideo": "Смотреть Видео"
+        },
         "gastroSlider": {
             "title": "Гастрономия",
             "viewAll": "Посмотреть все посты"
@@ -265,6 +268,10 @@
     },
     "postPage": {
         "share": "Поделиться",
+        "playVideo": {
+            "firstColumn": "смотреть",
+            "secondColumn": "видео"
+        },
         "editorsChoice": {
             "title": "Выбор редакции",
             "sliderBarVideo": "Видео"

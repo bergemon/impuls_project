@@ -1,11 +1,14 @@
 import { singlePost } from "@/types/postsType"
 import { Fancybox } from '@fancyapps/ui'
 import '@fancyapps/ui/dist/fancybox/fancybox.css'
+import { useTranslation } from "next-i18next"
 
 
 export const PostVideoBlock: React.FC<{
     post: singlePost
 }> = (props) => {
+    const { t, i18n } = useTranslation('locale')
+    
     Fancybox.bind("[data-fancybox]", {
         hideScrollbar: true,
         closeButton: true
@@ -23,7 +26,9 @@ export const PostVideoBlock: React.FC<{
                             <a href={`https://youtu.be/${props.post.videoUrl}`} data-fancybox="" className="play-cont">
                                 <i className="ion-play me-3"></i>
                                 <span>
-                                    play <br/> video
+                                    {t('postPage.playVideo.firstColumn')}
+                                    <br />
+                                    {t('postPage.playVideo.secondColumn')}
                                 </span>
                             </a>
                         </div>

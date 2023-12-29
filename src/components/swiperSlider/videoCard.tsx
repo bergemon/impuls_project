@@ -1,6 +1,7 @@
 import { postType } from "@/types/postsType"
 import { Fancybox } from '@fancyapps/ui'
 import '@fancyapps/ui/dist/fancybox/fancybox.css'
+import { useTranslation } from "next-i18next"
 import Link from "next/link"
 
 type videoCardType = {
@@ -8,6 +9,8 @@ type videoCardType = {
 }
 
 export const VideoCard = (props: videoCardType) => {
+    const { t, i18n } = useTranslation('locale')
+    
     Fancybox.bind("[data-fancybox]", {
         hideScrollbar: true,
         closeButton: true
@@ -33,7 +36,7 @@ export const VideoCard = (props: videoCardType) => {
                                 className="play-cont mt-90"
                             >
                                 <i className="ion-play me-3"></i>
-                                <span className="fsz-14px">&nbsp;Play Video</span>
+                                <span className="fsz-14px">&nbsp;{t('home.hotvideosBlock.playVideo')}</span>
                             </a>
                         </div>
                     </div>
