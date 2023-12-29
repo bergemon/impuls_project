@@ -26,9 +26,9 @@ export const PostVideoBlock: React.FC<{
                             <a href={`https://youtu.be/${props.post.videoUrl}`} data-fancybox="" className="play-cont">
                                 <i className="ion-play me-3"></i>
                                 <span>
-                                    {t('postPage.playVideo.firstColumn')}
+                                    {t('postPage.playVideo.firstRow')}
                                     <br />
-                                    {t('postPage.playVideo.secondColumn')}
+                                    {t('postPage.playVideo.secondRow')}
                                 </span>
                             </a>
                         </div>

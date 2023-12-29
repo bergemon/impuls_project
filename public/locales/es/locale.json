@@ -265,8 +265,8 @@
     "postPage": {
         "share": "Compartir",
         "playVideo": {
-            "firstColumn": "reproduce",
-            "secondColumn": "el video"
+            "firstRow": "reproduce",
+            "secondRow": "el video"
         },
         "editorsChoice": {
             "title": "Selección del editor",

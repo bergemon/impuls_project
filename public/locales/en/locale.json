@@ -264,8 +264,8 @@
     "postPage": {
         "share": "Share",
         "playVideo": {
-            "firstColumn": "play",
-            "secondColumn": "video"
+            "firstRow": "play",
+            "secondRow": "video"
         },
         "editorsChoice": {
             "title": "Editor's Choice",

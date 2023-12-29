@@ -269,8 +269,8 @@
     "postPage": {
         "share": "Поделиться",
         "playVideo": {
-            "firstColumn": "смотреть",
-            "secondColumn": "видео"
+            "firstRow": "смотреть",
+            "secondRow": "видео"
         },
         "editorsChoice": {
             "title": "Выбор редакции",
