@@ -1,3 +1,4 @@
+import { handleFormErrors } from "@/utils/formErrHandler"
 import { useTranslation } from "next-i18next"
 import Link from "next/link"
 import { useRef, useState } from "react"
@@ -6,71 +7,36 @@ type formType = {
     lang: string
 }
 
-interface msg {
+export interface msg {
     msg: string
+    msgIndex: number
     status: boolean
 }
 
 export const Form = (props: formType) => {
     const { t, i18n } = useTranslation('locale')
     
-    const [message, setMessage] = useState<msg>({msg: "", status: false})
+    const [message, setMessage] = useState<msg>({msg: "", msgIndex: -1, status: false})
     const nameRef = useRef<HTMLInputElement>(null)
     const messageRef = useRef<HTMLParagraphElement>(null)
     const emailRef = useRef<HTMLInputElement>(null)
     const checkBoxRef = useRef<HTMLInputElement>(null)
 
-    const subscribe = async (checked: boolean) => {
-        if(checked === false)
-        {
-            const errMsg: msg = { msg: t('home.whatIsNewBlock.form.errorHandler.agreeErr'), status: false }
-            setMessage(prev => errMsg)
-            return
-        }
-        if(nameRef.current?.value?.length !== undefined
-            && nameRef.current?.value?.length < 4)
-        {
-            const errMsg: msg = { msg: t('home.whatIsNewBlock.form.errorHandler.nameErr'), status: false }
-            setMessage(prev => errMsg)
-            return
-        }
-        if(emailRef.current?.value?.search("@") !== undefined
-            && emailRef.current?.value?.search("@") === -1)
-        {
-            const errMsg: msg = { msg: t('home.whatIsNewBlock.form.errorHandler.defErr'), status: false }
-            setMessage(prev => errMsg)
-            return
-        }
-        if(emailRef.current?.value?.search(/\./) === 0
-            || emailRef.current?.value?.search(/\./) === -1
-            || emailRef.current?.value?.search(/\./) === undefined)
-        {
-            const errMsg: msg = { msg: t('home.whatIsNewBlock.form.errorHandler.dotErr'), status: false }
-            setMessage(prev => errMsg)
-            return
-        }
-        if(emailRef.current?.value?.search("@") !== undefined
-            && emailRef.current?.value?.search("@") < 3)
-        {
-            const errMsg: msg = { msg: t('home.whatIsNewBlock.form.errorHandler.mailErr'), status: false }
-            setMessage(prev => errMsg)
-            return
-        }
-        if(emailRef.current?.value?.search(/\./)
-            < emailRef.current?.value?.search("@") + 4)
-        {
-            const errMsg: msg = { msg: t('home.whatIsNewBlock.form.errorHandler.hostErr'), status: false }
-            setMessage(prev => errMsg)
-            return
-        }
-        if(emailRef.current?.value?.search(/\./)
-            > emailRef.current?.value?.length - 2)
-        {
-            const errMsg: msg = { msg: t('home.whatIsNewBlock.form.errorHandler.domainErr'), status: false }
-            setMessage(prev => errMsg)
-            return
-        }
+    const errorsTranslation = t('home.whatIsNewBlock.form.errorHandler', {returnObjects: true})
+    if(message.msgIndex !== -1) {
+        Object.values(errorsTranslation).map((item, id) => {
+            if (id === message.msgIndex) {
+                message.msg !== item
+                ? setMessage({msg: item, msgIndex: message.msgIndex, status: message.status})
+                : null
+            }
+        })
+    }
 
+    const subscribe = async (checked: boolean) => {
+        const handlerResult = handleFormErrors(nameRef, emailRef, setMessage, checked, errorsTranslation)
+        if(handlerResult === true) { return }
+        
         const formData = {
             firstName: nameRef.current?.value,
             email: emailRef.current?.value,
@@ -94,12 +60,13 @@ export const Form = (props: formType) => {
         let resMessage = await result.json()
 
         if (resMessage.message === "Subscriber added successfully") {
-            const resMsg: msg = { msg: t('home.whatIsNewBlock.form.sucess'), status: true }
+            const resMsg: msg =
+                { msg: t('home.whatIsNewBlock.form.errorHandler.success'), msgIndex: 7, status: true }
             setMessage(prev => resMsg)
             return
         }
         else {
-            const resMsg: msg = { msg: resMessage.message, status: false }
+            const resMsg: msg = { msg: resMessage.message, msgIndex: -1, status: false }
             setMessage(prev => resMsg)
             return
         }

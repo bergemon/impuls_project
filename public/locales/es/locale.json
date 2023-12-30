@@ -152,9 +152,9 @@
                     "dotErr": "El punto debe colocarse después del símbolo «@»",
                     "mailErr": "Nombre de correo electrónico demasiado corto",
                     "hostErr": "El nombre del host de correo electrónico debe tener 3 o más caracteres",
-                    "domainErr": "El nombre de dominio del correo electrónico debe tener 2 o más caracteres"
-                },
-                "sucess": "Te has suscrito exitosamente a nuestro newsletter"
+                    "domainErr": "El nombre de dominio del correo electrónico debe tener 2 o más caracteres",
+                    "success": "Te has suscrito exitosamente a nuestro newsletter"
+                }
             },
             "stayConnected": "Mantente conectada"
         },

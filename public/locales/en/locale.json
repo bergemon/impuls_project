@@ -152,9 +152,9 @@
                     "dotErr": "Dot must be placed after «@» symbol",
                     "mailErr": "Too short e-mail name",
                     "hostErr": "E-mail host name must have 3 or more characters",
-                    "domainErr": "E-mail domain name must have 2 or more characters"
-                },
-                "sucess": "You have successfully subscribed to our newsletter"
+                    "domainErr": "E-mail domain name must have 2 or more characters",
+                    "success": "You have successfully subscribed to our newsletter"
+                }
             },
             "stayConnected": "Stay connected"
         },
