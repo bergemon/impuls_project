@@ -20,7 +20,13 @@ export const Form = (props: formType) => {
     const emailRef = useRef<HTMLInputElement>(null)
     const checkBoxRef = useRef<HTMLInputElement>(null)
 
-    const subscribe = async () => {
+    const subscribe = async (checked: boolean) => {
+        if(checked === false)
+        {
+            const errMsg: msg = { msg: t('home.whatIsNewBlock.form.errorHandler.agreeErr'), status: false }
+            setMessage(prev => errMsg)
+            return
+        }
         if(nameRef.current?.value?.length !== undefined
             && nameRef.current?.value?.length < 4)
         {
@@ -58,7 +64,7 @@ export const Form = (props: formType) => {
             return
         }
         if(emailRef.current?.value?.search(/\./)
-        > emailRef.current?.value?.length - 2)
+            > emailRef.current?.value?.length - 2)
         {
             const errMsg: msg = { msg: t('home.whatIsNewBlock.form.errorHandler.domainErr'), status: false }
             setMessage(prev => errMsg)
@@ -88,7 +94,7 @@ export const Form = (props: formType) => {
         let resMessage = await result.json()
 
         if (resMessage.message === "Subscriber added successfully") {
-            const resMsg: msg = { msg: resMessage.message, status: true }
+            const resMsg: msg = { msg: t('home.whatIsNewBlock.form.sucess'), status: true }
             setMessage(prev => resMsg)
             return
         }
@@ -155,8 +161,8 @@ export const Form = (props: formType) => {
                     className="btn w-100 bg-main mt-30 rounded-pill"
                     onClick={() => {
                         checkBoxRef.current?.checked
-                        ? subscribe()
-                        : null
+                        ? subscribe(true)
+                        : subscribe(false)
                     }}
                 >
                     <span className="text-white">{t('home.whatIsNewBlock.form.button')}</span>

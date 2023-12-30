@@ -146,13 +146,15 @@
                 "policyLink": "política de privacidad",
                 "button": "Suscríbete",
                 "errorHandler": {
+                    "agreeErr": "No estabas de acuerdo con nuestra política de privacidad",
                     "nameErr": "El nombre escrito es demasiado corto",
                     "defErr": "Dirección de correo errónea",
                     "dotErr": "El punto debe colocarse después del símbolo «@»",
                     "mailErr": "Nombre de correo electrónico demasiado corto",
                     "hostErr": "El nombre del host de correo electrónico debe tener 3 o más caracteres",
                     "domainErr": "El nombre de dominio del correo electrónico debe tener 2 o más caracteres"
-                }
+                },
+                "sucess": "Te has suscrito exitosamente a nuestro newsletter"
             },
             "stayConnected": "Mantente conectada"
         },
