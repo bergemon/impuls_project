@@ -17,11 +17,12 @@ export const Footer = (props: footerType) => {
             <div className="container">
                 <div className="content pt-40 pb-40 border-1 border-top brd-gray text-center">
                     <div className="foot-links mt-80">
+                        <Link href="https://impulsguide.online/promocion-revista-impuls">{t('footer.promotion')}</Link>&nbsp;
                         <Link href="/about">{t('footer.about')}</Link>&nbsp;
-                        <Trans i18nKey="test">
-                            <Link href="/contact">{t('footer.contact')}</Link>&nbsp;
-                        </Trans>
-                        <Link href="/policy">{t('footer.policy')}</Link>
+                        <Link href="/contact">{t('footer.contact')}</Link>&nbsp;
+                        <Link href="/policy">{t('footer.policy')}</Link>&nbsp;
+                        <Link href="/terms-of-service">{t('footer.termsOfService')}</Link>&nbsp;
+                        <Link href="/cookies">{t('footer.cookiesPolicy')}</Link>
                     </div>
                     <div className="foot-social mt-40">
                         <Link href={props.socials ? props.socials.instagram : "/"}>

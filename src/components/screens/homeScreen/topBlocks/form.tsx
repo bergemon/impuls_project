@@ -74,7 +74,7 @@ export const Form = (props: formType) => {
 
     return (
         <div className="col-lg-12 custom-col-half custom-col-small tc-subscribe-style3 mt-30 custom-mt-70 custom-col-margin">
-            <div className="sub-form radius-7">
+            <div style={{color: "#212529"}} className="sub-form radius-7">
                 <p className="text-uppercase fsz-14px mb-30"> {t('home.whatIsNewBlock.form.title')} </p>
                 <div className="text fsz-14px mb-15">
                     {t('home.whatIsNewBlock.form.description')}
@@ -107,7 +107,7 @@ export const Form = (props: formType) => {
                         {t('home.whatIsNewBlock.form.policy')}&nbsp;
                         <Link
                             href={`/${props.lang}/policy`}
-                            className="text-decoration-underline color-000"
+                            className="text-decoration-underline color-111"
                         >
                             {t('home.whatIsNewBlock.form.policyLink')}
                         </Link>

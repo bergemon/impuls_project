@@ -89,9 +89,12 @@
         }
     },
     "footer": {
+        "promotion": "Promotion",
         "about": "About us",
         "contact": "Contact",
-        "policy": "Privacy Policy",
+        "policy": "Privacy policy",
+        "termsOfService": "Terms of service",
+        "cookiesPolicy": "Cookies policy",
         "copyright": "Magazine",
         "rights": "All Rights Reserved"
     },
@@ -101,7 +104,7 @@
     },
     "sidebar": {
         "about": "About us",
-        "description": "If you have any question or question, we will be happy to assist you, as well as to listen to your suggestion about the collaboration.",
+        "description": "A lifestyle portal in SPAN, ENG and RUS, for a select public, with the aim of fostering social and business relationships",
         "categories": "Categories",
         "contactNfollow": "In contact with us",
         "contact": {

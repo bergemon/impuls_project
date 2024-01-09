@@ -89,9 +89,12 @@
         }
     },
     "footer": {
+        "promotion": "Promoción",
         "about": "Sobre nosotros",
         "contact": "Contacto",
         "policy": "Política de privacidad",
+        "termsOfService": "Términos de servicio",
+        "cookiesPolicy": "Política de cookies",
         "copyright": "revista",
         "rights": "Todos los derechos reservados"
     },
@@ -101,7 +104,7 @@
     },
     "sidebar": {
         "about": "Acerca de nosotros",
-        "description": "Ante cualquier duda o pregunta estaremos encantados de atenderte, así como de escuchar tu sugerencia sobre la colaboración.",
+        "description": "Un portal de lifestyle en ESP, ENG y RUS, para un público selecto, con el objetivo de fomentar las relaciones sociales y empresariales",
         "categories": "Categorías",
         "contactNfollow": "En contacto con nosotros",
         "contact": {

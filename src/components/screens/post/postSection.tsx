@@ -5,6 +5,8 @@ import parse from 'html-react-parser'
 import { PostVideoBlock } from "./videoBlock"
 import { useTranslation } from "next-i18next"
 import styles from './styles/postSection.module.css'
+import { useRouter } from "next/router"
+import { localEnvData } from "@/types/layout"
 
 type postSection = {
     post: singlePost
@@ -12,9 +14,11 @@ type postSection = {
     lang: string
     postName: string
     postId: number
+    localEnvData: localEnvData
 }
 
 const PostSection = (props: postSection) => {
+    const router = useRouter()
     const { t, i18n } = useTranslation('locale')
 
     return (
@@ -38,16 +42,34 @@ const PostSection = (props: postSection) => {
                                 <p className="text-uppercase mb-20">{t('postPage.share')}</p>
                                 <div className="share-icons">
                                     <Link
-                                        href={`https://www.facebook.com/sharer/sharer.php?u=${process.env.WEBSITE}${props.lang === 'es' ? "" : "/" + props.lang}/post/${props.postName}`}
+                                        href={`https://www.facebook.com/sharer/sharer.php?u=${props.localEnvData.website}${props.lang === 'es' ? "" : "/" + props.lang}/post/${props.postName}`}
                                         target={"_blank"}
                                         className={styles.SocialsIcon}
                                     > <i className="la la-facebook-f">
                                     </i> </Link>
+                                    {
+                                        props.post.title
+                                        ? <Link
+                                            // href={`whatsapp://send?text=${props.post.title}`}
+                                            // data-action={"share/whatsapp/share"}
+                                            href={`https://wa.me/message/6WDSVHMKMVLZE1`}
+                                            target={"_blank"}
+                                            className={`${styles.SocialsIcon} ${styles.Whatsapp}`}
+                                        > <i className="la la-whatsapp">
+                                        </i> </Link>
+                                        : null
+                                    }
                                     <Link
-                                        href={`https://www.instagram.com/sharer/sharer.php?u=${process.env.WEBSITE}${props.lang === 'es' ? "" : "/" + props.lang}/post/${props.postName}`}
+                                        href={`https://telegram.me/share/url?url=${props.localEnvData.website}${props.lang === 'es' ? "" : "/" + props.lang}/post/${props.postName}&text=${props.post.title}`}
                                         target={"_blank"}
                                         className={styles.SocialsIcon}
-                                    > <i className="la la-instagram">
+                                    > <i className="la la-telegram">
+                                    </i> </Link>
+                                    <Link
+                                        href={`https://twitter.com/share?text=${props.post.title}&url=${props.localEnvData.website}${props.lang === 'es' ? "" : "/" + props.lang}/post/${props.postName}&hashtags=${props.postName}`}
+                                        target={"_blank"}
+                                        className={styles.SocialsIcon}
+                                    > <i className="la la-twitter">
                                     </i> </Link>
                                 </div>
                             </div>

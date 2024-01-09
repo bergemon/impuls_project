@@ -57,6 +57,7 @@ export default function Post(props: postLayout) {
                     postName={props.postName}
                     postId={props.postId}
                     lang={props.lang}
+                    localEnvData={props.localEnvData}
                 />
             </PageLayout>
         </HeadLayout>

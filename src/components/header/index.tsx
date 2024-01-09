@@ -94,7 +94,7 @@ export const Header: React.FC<{
                     style={{backgroundImage: `url(/assets/img/categories/category_${props.thisCategory?.id}.png)`}}
                 >
                     <div className="container">
-                        <div className="content text-center">
+                        <div className="content text-center color-ccc">
                             <h2 className="main-title">{props.thisCategory?.name}</h2>
                             <p className="fsz-16px">{catDescription}</p>
                         </div>

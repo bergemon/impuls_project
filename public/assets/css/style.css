@@ -2470,7 +2470,6 @@ small.text {
   background-color: #fdf6f5;
 }
 .nav-search-style1 .info h5 {
-  text-transform: capitalize;
   line-height: 1.8;
 }
 .nav-search-style1 .form .form-group {
@@ -15546,10 +15545,6 @@ small.loading01 {
 .dark-theme .brd-gray,
 .dark-theme .form-control {
   border-color: rgba(255, 255, 255, 0.1333333333) !important;
-}
-.dark-theme .form-check-input,
-.dark-theme .form-control {
-  background: rgba(255, 255, 255, 0.2);
 }
 .dark-theme .top-navbar.style-1 .date-weather .item .inf strong,
 .dark-theme .navbar.style-1 .navbar-nav .nav-item .nav-link,

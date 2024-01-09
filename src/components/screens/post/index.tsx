@@ -3,6 +3,7 @@ import { socialsType } from "@/types/socials"
 import DirectionPostsSlider from "./directionPosts"
 import EditorsChoice from "./editorsChoice"
 import PostSection from "./postSection"
+import { localEnvData } from "@/types/layout"
 
 export const SinglePost: React.FC<{
     post: singlePost
@@ -13,6 +14,7 @@ export const SinglePost: React.FC<{
     nextPosts: directionPost[]
     postName: string
     postId: number
+    localEnvData: localEnvData
 }> = (props) => {
 
     return (
@@ -23,6 +25,7 @@ export const SinglePost: React.FC<{
                 postName={props.postName}
                 postId={props.postId}
                 lang={props.lang}
+                localEnvData={props.localEnvData}
             />
             <DirectionPostsSlider
                 prevPosts={props.prevPosts}
