@@ -20,12 +20,12 @@ const CatLargeBlock = (props: catLargeBlockType) => {
 
     return (
         <div className="p-30 bg-white radius-7 border-0 mb-30">
-            <div className="row text-uppercase fsz-14px ">
+            <div className="row fsz-14px ">
                 <div className="col-lg-6">
-                    <p className="text-uppercase mb-20"> {props.catTitle} </p>
+                    <p className="mb-20"> {props.catTitle} </p>
                 </div>
                 <div className="col-lg-6 text-lg-end">
-                    <Link href={`/category/${props.categories[props.category-1].url}`} className="text-capitalize hover-main"> {props.catViewAll} <i className="la la-angle-right ms-1"></i> </Link>
+                    <Link href={`/category/${props.categories[props.category-1].url}`} className="hover-main"> {props.catViewAll} <i className="la la-angle-right ms-1"></i> </Link>
                 </div>
             </div>
             <div className="tc-post-list-style3">

@@ -5,7 +5,6 @@ import { categoryType } from '@/types/categoriesType'
 import { socialsType } from '@/types/socials'
 import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
-import { useDarkMode } from '@/utils/useDarkMode'
 
 const SlideBarCatCards: React.FC<{
     category: categoryType
@@ -34,7 +33,6 @@ type sideBarType = {
     isOpenedSlideBar: boolean
     setIsOpenedSlideBar: Dispatch<SetStateAction<boolean>>
     categories: categoryType[]
-    socials: socialsType
     isDark: boolean
 }
 

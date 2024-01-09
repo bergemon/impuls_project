@@ -92,7 +92,7 @@
         "about": "About us",
         "contact": "Contact",
         "policy": "Privacy Policy",
-        "copyright": "© 2024 Impuls PLUS Magazine",
+        "copyright": "Magazine",
         "rights": "All Rights Reserved"
     },
     "header": {
@@ -124,17 +124,17 @@
     "home": {
         "gastroBlock": {
             "title": "Gastronomy",
-            "viewAll": "View All Posts"
+            "viewAll": "View all posts"
         },
         "favRandPosts": "Featured",
         "whatIsNewBlock": {
             "tourismBlock": {
                 "title": "Tourism",
-                "viewAll": "View All Posts"
+                "viewAll": "View all posts"
             },
             "educationBlock": {
                 "title": "Education",
-                "viewAll": "View All Posts"
+                "viewAll": "View all posts"
             },
             "topPosts": "Top posts",
             "form": {
@@ -163,31 +163,31 @@
         },
         "gastroSlider": {
             "title": "Gastronomy",
-            "viewAll": "View All Posts"
+            "viewAll": "View all posts"
         },
         "fashionBlock": {
             "title": "Trend & Fashion",
-            "viewAll": "View All Posts"
+            "viewAll": "View all posts"
         },
         "HealthBlock": {
             "title": "Health",
-            "viewAll": "View All Posts"
+            "viewAll": "View all posts"
         },
         "financeBlock": {
             "title": "Finance & Law",
-            "viewAll": "View All Posts"
+            "viewAll": "View all posts"
         },
         "investBlock": {
             "title": "Investments",
-            "viewAll": "View All Posts"
+            "viewAll": "View all posts"
         },
         "networkBlock": {
             "title": "Networking",
-            "viewAll": "View All Posts"
+            "viewAll": "View all posts"
         },
         "sportBlock": {
             "title": "Sport",
-            "viewAll": "View All Posts"
+            "viewAll": "View all posts"
         },
         "featAuthors": {
             "title": "Featured authors",

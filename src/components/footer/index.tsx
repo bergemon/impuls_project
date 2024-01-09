@@ -6,6 +6,7 @@ import { Trans, useTranslation } from "next-i18next"
 
 type footerType = {
     socials: socialsType
+    locale: string
 }
 
 export const Footer = (props: footerType) => {
@@ -23,19 +24,52 @@ export const Footer = (props: footerType) => {
                         <Link href="/policy">{t('footer.policy')}</Link>
                     </div>
                     <div className="foot-social mt-40">
-                        <Link href={props.socials ? props.socials.facebook : "/"}>
-                            <i className="la la-facebook-f"></i>
-                        </Link>&nbsp;
                         <Link href={props.socials ? props.socials.instagram : "/"}>
                             <i className="la la-instagram"></i>
                         </Link>&nbsp;
+                        <Link href={props.socials ? props.socials.facebook : "/"}>
+                            <i className="la la-facebook-f"></i>
+                        </Link>&nbsp;
+                        <Link href={props.socials ? props.socials.telegram : "/"}>
+                            <i className="la la-telegram"></i>
+                        </Link>&nbsp;
+                        <Link href={props.socials ? props.socials.whatsapp : "/"}>
+                            <i className="la la-whatsapp"></i>
+                        </Link>&nbsp;
                         <Link href={props.socials ? props.socials.youtube : "/"}>
                             <i className="la la-youtube"></i>
+                        </Link>&nbsp;
+                        <Link href={props.socials ? props.socials.tiktok : "/"}>
+                            <img src={"/assets/img/tiktok.svg"} />
+                        </Link>&nbsp;
+                        <Link href={props.socials ? props.socials.linkedin : "/"}>
+                            <i className="la la-linkedin"></i>
                         </Link>
                     </div>
 
-                    <p className="fsz-14px color-666 mt-40">{t('footer.copyright')} <Link href="/" className="color-000 fw-bold">
-                        ImpulsPlus</Link>. {t('footer.rights')}.</p>
+                    <p className="fsz-14px color-666 mt-40">
+                        {
+                            props.locale === 'en'
+                            ? <>
+                                © 2024&nbsp;
+                                {t('footer.copyright')}
+                                &nbsp;
+                                <Link href="/" className="color-000 fw-bold">
+                                    Impuls PLUS
+                                </Link>.
+                            </>
+                            : <>
+                                © 2024&nbsp;
+                                <Link href="/" className="color-000 fw-bold">
+                                    Impuls PLUS
+                                </Link>
+                                &nbsp;
+                                {t('footer.copyright')}.
+                            </>
+                        }
+                        &nbsp;
+                        {t('footer.rights')}.
+                    </p>
                 </div>
             </div>
             <ScrollToTop

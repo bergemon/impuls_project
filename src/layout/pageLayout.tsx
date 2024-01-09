@@ -66,6 +66,7 @@ export default function PageLayout(props: LayoutProps) {
                 {props.children}
             <Footer
                 socials={props.socials}
+                locale={props.lang}
             />
             <SideBar
                 show={show}
@@ -73,7 +74,6 @@ export default function PageLayout(props: LayoutProps) {
                 categories={props.categories}
                 isOpenedSlideBar={isOpenedSlideBar}
                 setIsOpenedSlideBar={setIsOpenedSlideBar}
-                socials={props.socials}
                 isDark={isDark}
             />
         </div>
