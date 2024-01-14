@@ -2,7 +2,7 @@
     display: none;
 }
 .Page {
-    min-height: 49.3vh;
+    min-height: 55vh;
     display: flex;
     flex-direction: column;
 }

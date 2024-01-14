@@ -55,7 +55,13 @@ export const getStaticProps = async (ctx: NextPageContext) => {
     const categories_ = await fetch(`${process.env.API}/categories/${lang}`)
 
     // Сериализуем в джейсона
-    const categories = await categories_.json()
+    let categories
+    try {
+        categories = await categories_.json()
+    }
+    catch {
+        categories = null
+    }
 
     return {
         props: {

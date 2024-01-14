@@ -2,27 +2,33 @@
     "head": {
         "home": {
             "title": "Impuls PLUS, revista internacional de lujo en España",
-            "description": "Revista y guía de gastronomía y servicios de lujo en Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid"
+            "description": "Revista y guía de gastronomía y servicios de lujo en Alicante, Costa Blanca, Región de Murcia, Valencia, Madrid",
+            "author": "Impuls PLUS"
         },
         "searchedPosts": {
             "title": "Resultados de la búsqueda",
-            "description": "Aquí están los resultados de tu consulta."
+            "description": "Aquí están los resultados de tu consulta.",
+            "author": "Impuls PLUS"
         },
         "notFound_404": {
             "title": "¡Vaya! Página no encontrada.",
-            "description": "El destino es incierto, pero puedes volver al inicio o explorar otras secciones para continuar tu viaje."
+            "description": "El destino es incierto, pero puedes volver al inicio o explorar otras secciones para continuar tu viaje.",
+            "author": "Impuls PLUS"
         },
         "about": {
             "title": "Acerca de nosotros",
-            "description": "Proyecto trilíngüe, en español, inglés y ruso, que se inscribe perfectamente en el espacio multicultural actual. Con una clara apuesta por la calidad tanto del contenido como de la forma."
+            "description": "Proyecto trilíngüe, en español, inglés y ruso, que se inscribe perfectamente en el espacio multicultural actual. Con una clara apuesta por la calidad tanto del contenido como de la forma.",
+            "author": "Impuls PLUS"
         },
         "contact": {
             "title": "Contacta con nosotros",
-            "description": "Ante cualquier duda o pregunta estaremos encantados de atenderte, así como de escuchar tu sugerencia sobre la colaboración."
+            "description": "Ante cualquier duda o pregunta estaremos encantados de atenderte, así como de escuchar tu sugerencia sobre la colaboración.",
+            "author": "Impuls PLUS"
         },
         "policy": {
             "title": "Política de privacidad",
-            "description": "Explora nuestra Política de Privacidad para entender cómo recopilamos, utilizamos y protegemos tu información personal. Estamos comprometidos con tu privacidad y transparencia."
+            "description": "Explora nuestra Política de Privacidad para entender cómo recopilamos, utilizamos y protegemos tu información personal. Estamos comprometidos con tu privacidad y transparencia.",
+            "author": "Impuls PLUS"
         },
         "categoryMeta": {
             "author": "Impuls PLUS",

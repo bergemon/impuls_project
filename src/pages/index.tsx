@@ -73,11 +73,22 @@ export const getStaticProps = async (ctx: NextPageContext) => {
     const topPosts_ = await fetch(`${process.env.API}/posts/top/${lang}`)
 
     // Сериализуем в джейсона
-    const posts = await posts_.json()
-    const favoritePosts = await favoritePosts_.json()
-    const categories = await categories_.json()
-    const instaImgs = await instaImgs_.json()
-    const topPosts = await topPosts_.json()
+    let posts, favoritePosts, categories, instaImgs, topPosts
+    try {
+        posts = await posts_.json()
+        favoritePosts = await favoritePosts_.json()
+        categories = await categories_.json()
+        instaImgs = await instaImgs_.json()
+        topPosts = await topPosts_.json()
+    }
+    catch {
+        return {
+            redirect: {
+                permanent: false,
+                destination: `${lang === 'es' ? "" : "/" + lang}/404`
+            }
+        }
+    }
 
     return {
         props: {
