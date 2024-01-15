@@ -50,7 +50,7 @@ const PostSection = (props: postSection) => {
                                     {
                                         props.post.title
                                         ? <Link
-                                            href={`whatsapp://send?text=${props.post.title}`}
+                                            href={`whatsapp://send?text=${props.localEnvData.website}${props.lang === 'es' ? "" : "/" + props.lang}/post/${props.postName}`}
                                             data-action={"share/whatsapp/share"}
                                             className={`${styles.SocialsIcon} ${styles.Whatsapp}`}
                                         > <i className="la la-whatsapp">
